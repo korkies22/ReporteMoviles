@@ -1,0 +1,46 @@
+/*
+ * Decompiled with CFR 0_134.
+ */
+package de.cisha.android.board.service.jsonparser;
+
+public enum APIStatusCode {
+    API_OK(0),
+    API_ERROR_NOT_SET(-1),
+    API_ERROR_UNKNOWN(1),
+    API_ERROR_MISSING_ARGUMENT(2),
+    API_ERROR_FORBIDDEN(3),
+    API_ERROR_NOT_FOUND(4),
+    API_ERROR_SERVICE_UNAVAILABLE(5),
+    API_ERROR_INVALID_CREDENTIALS(6),
+    API_ERROR_UNCONFIRMED_ACCOUNT(7),
+    API_ERROR_INVALID_AUTHTOKEN(8),
+    API_ERROR_TOO_MANY_REQUESTS(9),
+    API_ERROR_CODE_INVALID_DEVICE(10),
+    API_ERROR_API_NOT_VALID_PLEASE_UPDATE(11),
+    API_ERROR_PAYMENT_FAILED(12),
+    INTERNAL_NOT_LOGGED_IN(33001),
+    INTERNAL_MALFORMED_API_URL(33002),
+    INTERNAL_INCORRECT_SERVER_JSON(33003),
+    INTERNAL_TIMEOUT(33004),
+    INTERNAL_INCORRECT_SERVER_JSON_NO_DATA_OBJECT(33005),
+    INTERNAL_UNKNOWN(32999),
+    INTERNAL_TACTICTRAINER_NO_MORE_EXERCISES(34001),
+    INTERNAL_TACTICTRAINER_GUEST_LIMIT_REACHED(34002),
+    INTERNAL_TACTICTRAINER_DAILY_LIMIT_REACHED(34003),
+    INTERNAL_PURCHASE_ERROR(35001),
+    INTERNAL_PURCHASE_CONSUMPTION_ERROR(35002);
+    
+    private int _statusCode;
+
+    private APIStatusCode(int n2) {
+        this._statusCode = n2;
+    }
+
+    public static APIStatusCode statusCodeFor(int n) {
+        for (APIStatusCode aPIStatusCode : APIStatusCode.values()) {
+            if (aPIStatusCode._statusCode != n) continue;
+            return aPIStatusCode;
+        }
+        return API_ERROR_UNKNOWN;
+    }
+}
