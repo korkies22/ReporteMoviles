@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffd7d7d7" android:gravity="center_horizontal" android:id="@id/broadcast_tournament_game_info_time1" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:23:34" custom:textstyle="text" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="start" android:gravity="center_horizontal" android:id="@id/broadcast_tournament_game_info_lastmove" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="123. Qe3xd5#" android:lines="1" android:scrollHorizontally="false" android:singleLine="true" android:layout_weight="1.0" custom:textstyle="text" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffd7d7d7" android:gravity="center_horizontal" android:id="@id/broadcast_tournament_game_info_time2" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0:23:34" custom:textstyle="text" />
+</merge>

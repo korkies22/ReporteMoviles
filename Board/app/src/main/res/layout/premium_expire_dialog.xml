@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingTop="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/premium_expires_days_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="12" app:textstyle="text_tall" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/premium_expire_dialog_days" app:textstyle="text" />
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.text.CustomTextView android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:text="@string/premium_expire_dialog_until_expiring" app:textstyle="text" />
+</LinearLayout>

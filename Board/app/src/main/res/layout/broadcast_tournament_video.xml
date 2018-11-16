@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ffebebeb" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/broadcast_tournament_video_click_catcher" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/broadcast_video_language_selection" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    <RelativeLayout android:id="@id/broadcast_tournament_video_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/broadcast_video_language_selection" android:layout_alignParentBottom="true" />
+</RelativeLayout>

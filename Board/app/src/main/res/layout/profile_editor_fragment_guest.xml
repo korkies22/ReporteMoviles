@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:custom="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/registration_button_register" android:drawableLeft="@drawable/profile_editor_ico_login_register" custom:textstyle="list_item_title" style="@style/profile_editior_header_view_style" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_vertical" android:layout_gravity="left" android:id="@id/profile_edit_guest_benefit_header_text" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:text="@string/conversion_register_title_join_chess24" custom:textstyle="list_item_title" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/conversion_dialog_subtext" android:gravity="center_vertical" android:layout_gravity="left" android:id="@id/profile_edit_guest_benefit_subtext" android:padding="2.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/conversion_register_intro_you_re_missing_out_registration_is_quick_and_free" custom:textstyle="table_italic" />
+        <LinearLayout android:orientation="vertical" android:id="@id/profile_edit_benefits_group" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" />
+        <de.cisha.android.ui.patterns.buttons.CustomButtonAlternative android:layout_gravity="center_horizontal" android:id="@id/profile_editor_guest_register_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:layout_marginBottom="12.0dip" android:text="@string/registration_button_register" />
+        <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/profile_analytics_setting" />
+    </LinearLayout>
+</ScrollView>

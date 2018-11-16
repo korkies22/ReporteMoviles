@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_chess24" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include android:id="@id/tactics_menubar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/tactics_exercise_menubar" />
+    <de.cisha.android.board.tactics.view.ExerciseHistoryView android:id="@id/tactics_exercise_history" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginBottom="3.0dip" android:layout_alignParentTop="true" />
+    <include android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/tactics_fieldview" android:layout_alignParentTop="true" android:layout_alignParentRight="true" layout="@layout/tactics_exercise_number_translate_viewgroup" />
+    <include android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/tactics_menubar" android:layout_below="@id/tactics_fieldview" layout="@layout/tactics_timer_container" />
+    <de.cisha.android.board.view.FieldView android:id="@id/tactics_fieldview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/tactics_exercise_history" />
+    <de.cisha.android.board.tactics.view.SolvedToastView android:gravity="center" android:id="@id/tactics_toast" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" android:layerType="software" />
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/eval_ind_black" />
+    <item>
+        <clip android:gravity="right" android:drawable="@drawable/eval_ind_white" android:clipOrientation="horizontal" />
+    </item>
+</layer-list>

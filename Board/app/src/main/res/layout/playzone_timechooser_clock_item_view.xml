@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="bottom|center" android:orientation="horizontal" android:id="@id/timecontrolview_parent" android:background="@drawable/playzone_timechooser_item_passive_background" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="30.0sp" android:textColor="@color/playzone_timechooser_item" android:id="@id/timecontrolview_minutes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/playzone_timechooser_item" android:id="@id/timecontrolview_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:text="min" />
+    <TextView android:textSize="20.0sp" android:textColor="@color/playzone_timechooser_item" android:layout_gravity="center_vertical" android:id="@id/timecontrolview_plus" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="+" />
+    <TextView android:textSize="30.0sp" android:textColor="@color/playzone_timechooser_item" android:id="@id/timecontrolview_increment_sec" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00" />
+    <TextView android:textSize="15.0sp" android:textColor="@color/playzone_timechooser_item" android:id="@id/timecontrolview_increment_unit" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="sec" />
+</LinearLayout>

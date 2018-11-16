@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/broadcast_tournament_team_name_left" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Team Name Left" android:maxLines="1" android:layout_weight="1.0" app:textstyle="table" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:id="@id/broadcast_tournament_team_points_left" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:layout_width="35.0dip" android:layout_height="wrap_content" android:text="2½" android:lines="1" app:textstyle="table" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:id="@id/broadcast_tournament_team_points_right" android:background="#ffc1d2e8" android:paddingLeft="5.0dip" android:paddingTop="10.0dip" android:paddingRight="5.0dip" android:paddingBottom="10.0dip" android:layout_width="35.0dip" android:layout_height="wrap_content" android:text="2½" android:lines="1" app:textstyle="table" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:gravity="center_horizontal" android:id="@id/broadcast_tournament_team_name_right" android:background="#ffc1d2e8" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Team Name Right" android:maxLines="1" android:layout_weight="1.0" app:textstyle="table" />
+        </LinearLayout>
+        <ImageView android:id="@id/broadcast_tournament_team_divider_image" android:layout_width="10.0dip" android:layout_height="wrap_content" android:src="@drawable/broadcast_team_match_live_ind" android:scaleType="fitStart" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+    <View android:background="@color/darkgraybackground" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    <View android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+</merge>

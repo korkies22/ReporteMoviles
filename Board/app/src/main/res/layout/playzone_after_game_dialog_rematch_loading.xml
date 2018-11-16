@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_after_game_dialog_rematch_text_timeout" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playzone_gameend_rematch_waiting_for_opponent" app:textstyle="text" />
+        <ProgressBar android:id="@id/progressBar1" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.buttons.CustomButtonNeutral android:textColor="@color/custom_button_neutral_text_active" android:id="@id/playzone_after_game_dialog_rematch_button_cancel" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="15.0dip" android:text="@string/dialog_button_cancel" />
+</LinearLayout>

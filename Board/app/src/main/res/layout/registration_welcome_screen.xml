@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/registration_logo_ribbon" android:scaleType="fitStart" />
+    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/registration_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/after_registration_header" app:textstyle="text_tall" />
+    <View android:background="#ff20548a" android:layout_width="250.0dip" android:layout_height="1.0dip" />
+    <View android:background="#ff488edb" android:layout_width="250.0dip" android:layout_height="1.0dip" android:layout_marginBottom="12.0dip" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/registration_text_color" android:gravity="center_horizontal" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/after_registration_text_1" app:textstyle="text_small" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/registration_text_color" android:gravity="center_horizontal" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/after_regsitration_text_2" app:textstyle="text_small" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/registration_text_color" android:gravity="center_horizontal" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginBottom="12.0dip" android:text="@string/after_registration_text_3" app:textstyle="text_small" />
+    <de.cisha.android.ui.patterns.buttons.CustomButtonAlternative android:gravity="center" android:id="@id/registration_welcome_ok_button" android:layout_width="250.0dip" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/after_regsitration_button_text" />
+    <View android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+</LinearLayout>

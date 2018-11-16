@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_after_game_dialog_rematch_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/playzone_gameend_opponent_wants_a_rematch" custom:textstyle="text" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.buttons.CustomButtonPositive android:id="@id/playzone_after_game_dialog_rematch_button_yes" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="30.0dip" android:text="Yes" />
+        <de.cisha.android.ui.patterns.buttons.CustomButtonNeutral android:textColor="@color/custom_button_neutral_text_active" android:id="@id/playzone_after_game_dialog_rematch_button_no" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="30.0dip" android:text="No" />
+    </LinearLayout>
+</LinearLayout>

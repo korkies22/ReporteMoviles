@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@drawable/bg_menu_repeat" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/upperLoginHalf" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="50.0">
+        <ImageView android:layout_gravity="center" android:id="@id/tactics_start_fragment_image1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/header_logo_480x800" />
+    </LinearLayout>
+    <LinearLayout android:orientation="vertical" android:id="@id/lowerLoginHalf" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="50.0">
+        <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="1.0dip" android:textColor="@android:color/primary_text_light" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="15.0" />
+            <EditText android:id="@id/login_username" android:background="@drawable/login_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="" android:hint="Username" android:maxLines="1" android:singleLine="true" android:layout_weight="70.0" android:inputType="textEmailAddress" android:imeOptions="actionNext" />
+            <TextView android:textSize="1.0dip" android:textColor="@android:color/primary_text_light" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="15.0" />
+        </LinearLayout>
+        <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="1.0dip" android:textColor="@android:color/primary_text_light" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="15.0" />
+            <EditText android:id="@id/login_password" android:background="@drawable/login_field" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="" android:hint="Password" android:maxLines="1" android:singleLine="true" android:layout_weight="70.0" android:inputType="textPassword" android:imeOptions="actionGo" />
+            <TextView android:textSize="1.0dip" android:textColor="@android:color/primary_text_light" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="15.0" />
+        </LinearLayout>
+        <Button android:textSize="12.0dip" android:textColor="@android:color/primary_text_light" android:gravity="center" android:layout_gravity="center" android:id="@id/login_button" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="login" />
+        <LinearLayout android:gravity="top" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="1.0dip" android:textColor="@android:color/primary_text_light" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="" android:layout_weight="15.0" />
+        </LinearLayout>
+        <ImageView android:layout_gravity="center" android:background="@drawable/line_or_repeat" android:layout_width="fill_parent" android:layout_height="2.0px" android:scaleType="center" />
+    </LinearLayout>
+</LinearLayout>

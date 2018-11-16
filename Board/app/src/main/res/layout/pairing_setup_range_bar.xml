@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pairing_time_left" />
+        <de.cisha.android.board.playzone.remote.view.MulticolorSeekbar android:id="@id/pairing_elo_range_time_indicator" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pairing_time_right" />
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="@string/pairing_range_setup_your_rating" app:textstyle="text_small" />
+    <FrameLayout android:orientation="horizontal" android:id="@id/pairing_setup_rangebar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip">
+        <View android:layout_gravity="center" android:id="@id/pairing_setup_rangebar_elo_marker" android:background="#ff000000" android:layout_width="8.0dip" android:layout_height="20.0dip" />
+    </FrameLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:id="@id/pairing_setup_text_range_min" android:background="@drawable/pairing_range_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="\#-256#" android:layout_alignParentLeft="true" app:textstyle="text" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:id="@id/pairing_setup_text_range_max" android:background="@drawable/pairing_range_bubble" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="\#+145#" android:layout_alignParentRight="true" app:textstyle="text" />
+    </RelativeLayout>
+</LinearLayout>

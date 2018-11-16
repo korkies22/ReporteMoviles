@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_chess24" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:layout_gravity="right" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/tactics_puzzle_start" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip" android:text="@string/tactictrainer_start_text" android:textAlignment="center" app:textstyle="text" />
+            <View android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" />
+            <include android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/tactics_start_rating" />
+            <View android:background="#ffaaaaaa" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginBottom="15.0dip" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tactics_start_startbutton_container" />
+            <include android:layout_width="fill_parent" android:layout_height="wrap_content" layout="@layout/tactics_start_gopremium_container" />
+        </LinearLayout>
+    </ScrollView>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rookie_tactics_start" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

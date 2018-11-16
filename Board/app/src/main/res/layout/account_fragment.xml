@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:ui="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <LinearLayout android:orientation="vertical" android:id="@id/account_type_screen_web_premium" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <LinearLayout android:orientation="vertical" android:background="@drawable/profile_background_dashboard1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_type_web_premium_account_headline" ui:textstyle="list_item_title" />
+                    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_type_web_premium_account_name" ui:textstyle="header" />
+                    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/accoutn_type_web_premium_expire_date" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=" " ui:textstyle="text" />
+                </LinearLayout>
+                <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_type_message_for_web_premium_users" ui:textstyle="text_small_bold" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/account_type_screen_mobile_premium" android:background="@drawable/profile_background_dashboard1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_type_mobile_premium_account_expires_date_headline" ui:textstyle="list_item_title" />
+                <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/account_type_mobile_premium_expire_date" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" ui:textstyle="header" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:id="@id/account_type_premium_features" android:background="@drawable/profile_background_dashboard1" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <uk.co.jasonfry.android.tools.ui.SwipeView android:id="@id/account_type_premium_slider" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="-6.0dip">
+                    <de.cisha.android.board.account.view.AccountBenefitView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" ui:benefit_description="@string/benefit_unlimited_tactic_excercises_description" ui:benefit_drawable="@drawable/accoutn_type_benefit_1" ui:benefit_header_text="@string/benefit_unlimited_tactic_excercises_header" />
+                    <de.cisha.android.board.account.view.AccountBenefitView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" ui:benefit_description="@string/benefit_full_analysis_description" ui:benefit_drawable="@drawable/accoutn_type_benefit_2" ui:benefit_header_text="@string/benefit_full_analysis_header" />
+                    <de.cisha.android.board.account.view.AccountBenefitView android:layout_gravity="center" android:layout_width="fill_parent" android:layout_height="wrap_content" ui:benefit_description="@string/benefit_unlimited_database_description" ui:benefit_drawable="@drawable/accoutn_type_benefit_3" ui:benefit_header_text="@string/benefit_unlimited_database_header" />
+                </uk.co.jasonfry.android.tools.ui.SwipeView>
+                <uk.co.jasonfry.android.tools.ui.PageControl android:layout_gravity="center_horizontal" android:id="@id/account_type_premium_pagecontrol" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+                <RelativeLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="vertical" android:id="@id/account_type_scroll_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+                    <View android:id="@id/account_type_buy_overlay" android:background="@color/account_type_gray_out_products" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/account_type_scroll_container" android:layout_alignTop="@id/account_type_scroll_container" android:layout_alignRight="@id/account_type_scroll_container" android:layout_alignBottom="@id/account_type_scroll_container" />
+                </RelativeLayout>
+                <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+                    <View android:background="@color/darkgraybackground" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/account_type_mobile_restore_hint" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/account_purchase_restore_hint" ui:textstyle="text_small_bold" />
+                    <de.cisha.android.ui.patterns.buttons.CustomButtonNeutral android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/account_type_restore_button" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" android:text="@string/account_restore_button_text" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

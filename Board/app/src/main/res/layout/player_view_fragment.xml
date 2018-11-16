@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.cisha.android.board.broadcast.statistics.view.BroadcastPlayerView android:id="@id/player_fragment_player_data_view" android:background="@drawable/profile_background_dashboard1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <ListView android:id="@id/player_fragment_opponents_list" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/player_fragment_player_data_view" />
+</RelativeLayout>

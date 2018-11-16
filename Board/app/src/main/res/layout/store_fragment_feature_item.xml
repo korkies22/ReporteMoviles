@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView android:layout_gravity="center" android:id="@id/store_feature_item_card_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="10.0dip" app:cardBackgroundColor="#ffeeeeee" app:cardCornerRadius="0.0dip" app:cardElevation="1.0dip" app:cardPreventCornerOverlap="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:background="@drawable/store_item_bg" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:id="@id/store_feature_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="\##Title##" android:layout_alignParentLeft="true" app:textstyle="sommetslab_light_title" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:id="@id/store_feature_subtitle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="\##sub title text asdf asdf" android:layout_below="@id/store_feature_title" android:layout_alignParentLeft="true" app:textstyle="text_small" />
+        <FrameLayout android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@id/store_feature_subtitle" android:layout_alignParentRight="true">
+            <ImageView android:id="@id/store_feature_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/accoutn_type_benefit_1" />
+        </FrameLayout>
+        <LinearLayout android:gravity="bottom" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_below="@id/store_feature_subtitle" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:id="@id/store_feature_flag_premium_web" android:background="#ffff0000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" app:textstyle="text" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:id="@id/store_feature_flag_premium_mobile" android:background="#ff00ff00" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" app:textstyle="text" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/store_feature_flag_registered" android:background="#ff0000ff" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="10.0dip" app:textstyle="text" />
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

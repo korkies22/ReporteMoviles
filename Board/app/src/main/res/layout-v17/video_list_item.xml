@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/internal_linear" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true">
+        <de.cisha.android.view.CouchImageView android:id="@id/video_teaser_image" android:layout_width="wrap_content" android:layout_height="65.0dip" android:layout_marginLeft="10.0dip" android:src="@drawable/video_image_placeholder" android:scaleType="fitXY" android:adjustViewBounds="true" android:maxWidth="90.0dip" />
+        <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/video_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:maxLines="3" android:layout_marginStart="5.0dip" app:textstyle="list_item_title_blue" />
+            <View android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/video_download_progress" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:lines="1" app:textstyle="text_small" />
+                <ImageView android:id="@id/video_download_progress_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="3.0dip" android:src="@drawable/video_download_ico" android:scaleType="centerInside" />
+                <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/video_duration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:maxLines="1" android:layout_marginStart="10.0dip" app:textstyle="list_item_subtitle_bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/video_play_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:src="@drawable/video_playseries_ico_states" android:scaleType="centerInside" />
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/video_description" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_below="@id/internal_linear" android:layout_marginStart="10.0dip" app:textstyle="list_item_subtitle" />
+    <View android:id="@id/video_list_seperator" android:background="#ff444444" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="10.0dip" android:layout_below="@id/internal_linear" android:layout_alignParentBottom="true" />
+</merge>

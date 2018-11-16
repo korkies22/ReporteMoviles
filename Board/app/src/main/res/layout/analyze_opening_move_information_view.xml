@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/analyze_opening_tree_move_san" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="move" custom:textstyle="analyze_movelist" />
+    <ImageView android:gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="7.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/analysis_divider" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/analyze_opening_tree_move_count" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="move" android:drawableLeft="@drawable/analysis_people_ico" android:drawablePadding="10.0dip" custom:textstyle="analyze_movelist" />
+    <ImageView android:gravity="bottom|center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="7.0dip" android:src="@drawable/analysis_divider" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+        <de.cisha.android.board.analyze.view.OpeningTreeTextViewLayout android:gravity="center" android:orientation="horizontal" android:id="@id/analyze_opening_tree_bar_white" android:background="@drawable/analysis_shadow_openingtree_l" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/analyze_opening_tree_bar_white_text" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:textstyle="navigationBar" />
+        </de.cisha.android.board.analyze.view.OpeningTreeTextViewLayout>
+        <de.cisha.android.board.analyze.view.OpeningTreeTextViewLayout android:gravity="center" android:orientation="horizontal" android:id="@id/analyze_opening_tree_bar_gray" android:background="@drawable/analysis_shadow_openingtree_m" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/analyze_opening_tree_bar_gray_text" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:textstyle="navigationBar" />
+        </de.cisha.android.board.analyze.view.OpeningTreeTextViewLayout>
+        <de.cisha.android.board.analyze.view.OpeningTreeTextViewLayout android:gravity="center" android:orientation="horizontal" android:id="@id/analyze_opening_tree_bar_black" android:background="@drawable/analysis_shadow_openingtree_r" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/analyze_opening_tree_bar_black_text" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:textstyle="navigationBar" />
+        </de.cisha.android.board.analyze.view.OpeningTreeTextViewLayout>
+    </LinearLayout>
+</merge>

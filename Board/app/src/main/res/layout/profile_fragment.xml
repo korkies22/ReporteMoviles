@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout android:id="@id/profile_swipe_refresh_layout" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:background="@drawable/bg_chess24" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.board.profile.view.ProfileDataView android:id="@id/profile_fragment_profile_data_view" android:background="@drawable/profile_background_dashboard1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <de.cisha.android.board.profile.view.RegisterWidgetView android:id="@id/profile_fragment_register_widget_view" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <de.cisha.android.board.profile.view.TournamentsWidgetView android:id="@id/profile_fragment_tournaments_widget_view" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <de.cisha.android.board.profile.view.YourGamesView android:id="@id/profile_fragment_your_games_view" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+            <de.cisha.android.board.profile.view.YourTacticsStatsView android:id="@id/profile_fragment_your_stats_view" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+        </LinearLayout>
+    </ScrollView>
+</android.support.v4.widget.SwipeRefreshLayout>

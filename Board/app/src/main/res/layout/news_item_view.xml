@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="10.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.view.WebImageView android:id="@id/news_item_image" android:layout_width="100.0dip" android:layout_height="70.0dip" android:layout_marginRight="7.0dip" android:scaleType="centerCrop" android:layout_alignParentLeft="true" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/text_gray" android:id="@id/news_item_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#date#" android:lines="1" android:layout_toRightOf="@id/news_item_image" android:layout_alignTop="@id/news_item_image" app:textstyle="text_small" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/text_gray" android:ellipsize="end" android:gravity="right" android:id="@id/news_item_author" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="\#author#" android:lines="1" android:layout_toRightOf="@id/news_item_date" android:layout_alignTop="@id/news_item_image" android:layout_alignParentRight="true" app:textstyle="text_small" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/news_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="\#title#" android:maxLines="3" android:layout_toRightOf="@id/news_item_image" android:layout_below="@id/news_item_author" app:textstyle="list_item_title" />
+        </RelativeLayout>
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/news_item_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="\#description text long#" app:textstyle="text" />
+    <include layout="@layout/gray_line" />
+</LinearLayout>

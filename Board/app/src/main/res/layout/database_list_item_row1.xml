@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/database_list_item_player_name_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="Max Mustermann" android:maxLines="1" android:layout_weight="34.0" app:textstyle="list_item_title" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:id="@id/database_list_item_result" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="1-0" android:maxLines="1" android:layout_weight="14.0" app:textstyle="list_item_title" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:gravity="center|left" android:id="@id/database_list_item_player_name_right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="Michael Glotzkowski" android:maxLines="1" android:layout_weight="43.0" app:textstyle="list_item_title" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/database_list_item_title" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="untitled analysis" android:maxLines="1" android:layout_weight="86.0" app:textstyle="list_item_title" />
+</LinearLayout>

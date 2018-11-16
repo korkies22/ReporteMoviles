@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <View android:background="#ff20548a" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <View android:background="#ff488edb" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/registration_text_color" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:text="@string/login_divider_or" android:maxLines="1" app:textstyle="text_small" />
+    <LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <View android:background="#ff20548a" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <View android:background="#ff488edb" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+    </LinearLayout>
+</LinearLayout>

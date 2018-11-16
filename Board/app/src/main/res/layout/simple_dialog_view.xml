@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:textSize="22.0sp" android:textColor="@color/playzoneTimeChooserText" android:id="@id/simple_dialog_view_title" android:background="@drawable/dialog_title_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="title" android:shadowColor="#ff161a34" android:shadowDy="-1.0" android:shadowRadius="1.0" />
+    <LinearLayout android:layout_gravity="center" android:orientation="vertical" android:id="@id/simple_dialog_view_content" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/simple_dialog_view_bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</merge>

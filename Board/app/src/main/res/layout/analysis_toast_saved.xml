@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/analyze_toast_image" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/toast_saved_game" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/analyze_toast_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:minWidth="60.0dip" android:text="@string/analysis_saved_in_my_analyses" android:maxLines="2" custom:textstyle="toast" />
+</merge>

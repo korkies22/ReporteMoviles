@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/player_data_image_and_data" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <RelativeLayout android:layout_gravity="top" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginTop="3.0dip">
+            <de.cisha.android.view.RoundedWebImageView android:id="@id/player_data_image" android:layout_width="42.0dip" android:layout_height="42.0dip" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/player_data_fullname_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Magnus Carlsen" android:maxLines="1" app:textstyle="username_title" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/player_data_title_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GM" android:maxLines="1" app:textstyle="text_bold" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+                <ImageView android:id="@id/player_data_country_flag" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+                <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/player_data_country_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="Norway" android:maxLines="1" app:textstyle="text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/player_data_ratings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_dark_blue" android:gravity="center_horizontal" android:id="@id/player_data_rating_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2680" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_dark_blue" android:gravity="center_horizontal" android:id="@id/player_data_points_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="10.5 / 11" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_dark_blue" android:gravity="center_horizontal" android:id="@id/player_data_performanceText" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2934" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_dark_blue" android:gravity="center_horizontal" android:id="@id/player_data_elo_gain" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="+ 1.5" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/broadcast_player_profile_rating" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/broadcast_player_profile_points_games" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/broadcast_player_profile_performance" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/broadcast_player_profile_rating_diff" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+    </LinearLayout>
+</merge>

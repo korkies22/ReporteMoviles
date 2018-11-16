@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/move_confirm_textview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginTop="5.0dip" custom:textstyle="analyze_movelist_bold" />
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip">
+        <de.cisha.android.ui.patterns.buttons.CustomButtonNeutral android:gravity="center" android:id="@id/move_confirm_cancel_button" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" android:text="@string/move_confirmation_cancel" />
+        <View android:layout_width="0.0dip" android:layout_height="1.0dip" android:layout_weight="1.0" />
+        <de.cisha.android.ui.patterns.buttons.CustomButtonAlternative android:gravity="center" android:id="@id/move_confirm_confirm_button" android:layout_width="100.0dip" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginRight="30.0dip" android:layout_marginBottom="5.0dip" android:text="@string/move_confirmation_confirm" />
+    </LinearLayout>
+</merge>

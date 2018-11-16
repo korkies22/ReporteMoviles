@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup android:id="@id/radioGroup1" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.cisha.android.ui.patterns.input.CustomRadioButton android:id="@id/setup_board_chooser_active_color_white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/setup_board_white" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+    <de.cisha.android.ui.patterns.input.CustomRadioButton android:id="@id/setup_board_chooser_active_color_black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/setup_board_black" />
+</RadioGroup>

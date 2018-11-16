@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:id="@id/store_subscription_indicator" android:background="@color/chess24_premium_web" android:layout_width="6.0dip" android:layout_height="fill_parent" android:layout_marginRight="10.0dip" android:layout_alignTop="@id/store_subscription_view_title" android:layout_alignBottom="@id/store_subscription_view_date" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/menuItemTextInactive" android:id="@id/store_subscription_view_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="\#Mobile Premium#" android:layout_toRightOf="@id/store_subscription_indicator" app:textstyle="menuHeader" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/store_subscription_view_date" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/store_subscription_renew_text" android:layout_toRightOf="@id/store_subscription_indicator" android:layout_below="@id/store_subscription_view_title" app:textstyle="text_small" />
+</RelativeLayout>

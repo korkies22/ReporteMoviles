@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:paddingLeft="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <ImageView android:layout_gravity="center_vertical" android:id="@id/team_data_country_flag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/flag_fr" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/team_data_team_name" android:paddingLeft="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="France" android:maxLines="1" app:textstyle="username_title" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/team_data_rating_points" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_red" android:gravity="center_horizontal" android:id="@id/team_data_match_points" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="10" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_red" android:gravity="center_horizontal" android:id="@id/team_data_board_points" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="20" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_light_blue" android:gravity="center_horizontal" android:id="@id/team_data_average_rating" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2680" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/team_data_match_points" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/team_data_board_points" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/team_data_average_rating" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip">
+        <ProgressBar android:id="@id/refreshing_list_header_progressbar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleSmall" />
+        <ImageView android:layout_gravity="center" android:id="@id/refreshing_list_header_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/arrow_refresh_down" android:alpha="0.6" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:layout_gravity="center_horizontal" android:id="@id/smalltext" android:layout_width="220.0dip" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="Hold down to refresh" app:textstyle="refreshing_list_header" />
+    </LinearLayout>
+</merge>

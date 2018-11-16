@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_result_view_intro_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-- Du hast aufgegeben --" app:textstyle="text" />
+    <FrameLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_result_view_your_standing_is_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/game_end_dialog_your_score_is_now" app:textstyle="text_small" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_result_view_score_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-- 3.5 - 2.5 --" app:textstyle="text_bold" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_result_view_your_new_rating_is_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="-- Deine neues Rating ist: --" app:textstyle="text_small" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_result_view_new_rating_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="1850 |" app:textstyle="text_bold" />
+                <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_result_view_rating_indicator_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="➘➚" app:textstyle="text_bold" />
+                <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_result_view_rating_change_number_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="35" app:textstyle="text_bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/playzone_result_view_loader" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@android:style/Widget.ProgressBar.Small" />
+    </FrameLayout>
+</merge>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_chess24" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="10.0dip" android:text="@string/feedback_headline" app:textstyle="text_bold" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="10.0dip" android:text="@string/feedback_text" app:textstyle="text" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/chess24Blue" android:gravity="center_horizontal" android:id="@id/feedback_email_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="10.0dip" android:text="@string/email_betatest_cisha_de" app:textstyle="text_tall" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="10.0dip" android:text="@string/feedback_please_include_information" app:textstyle="text" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:id="@id/feedback_information" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="10.0dip" app:textstyle="text" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="10.0dip" android:text="@string/feedback_thanks" app:textstyle="text" />
+        </LinearLayout>
+    </ScrollView>
+    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/rookie_feedback" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true" />
+</RelativeLayout>

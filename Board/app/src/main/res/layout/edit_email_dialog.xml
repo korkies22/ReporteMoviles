@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="250.0dip" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <View android:background="@drawable/playzone_after_game_line_dialog" android:layout_width="fill_parent" android:layout_height="2.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+    <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_email_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:hintText="@string/edit_email_email_field" />
+    <de.cisha.android.ui.patterns.input.CustomEditPassword android:id="@id/edit_email_password_input" android:layout_width="fill_parent" android:layout_height="wrap_content" app:hintText="@string/edit_email_password_field" />
+    <de.cisha.android.board.profile.view.FormErrorView android:id="@id/edit_email_errors" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <include layout="@layout/cancel_and_save" />
+</LinearLayout>

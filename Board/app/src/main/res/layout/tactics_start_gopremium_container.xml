@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/tactics_start_fragment_gopremium_container" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="@string/tactics_start_screen_next_session_in" app:textstyle="text" />
+    <TextView android:textSize="24.0sp" android:textColor="#ff000000" android:id="@id/tactics_start_fragment_timeout_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="00:00" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:text="@string/tactics_start_screen_daily_limit_reached" app:textstyle="text" />
+    <de.cisha.android.ui.patterns.buttons.CustomButtonPremium android:textColor="@color/playzoneTimeChooserText" android:layout_gravity="center_horizontal" android:id="@id/tactics_startscreen_go_premium_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/tactics_start_screen_go_mobile_premium" />
+</LinearLayout>

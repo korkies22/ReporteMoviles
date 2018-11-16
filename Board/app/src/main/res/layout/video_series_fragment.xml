@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+        <de.cisha.android.board.video.view.VideoSeriesHeaderView android:id="@id/video_series_header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+        <View android:background="#ff444444" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/video_series_header_offline_mode_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/offline_available" android:layout_alignParentLeft="true" app:textstyle="text" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffaeaeae" android:id="@id/video_series_header_download_progress" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_below="@id/video_series_header_offline_mode_title" android:layout_alignParentLeft="true" app:textstyle="text_small" />
+            <include android:id="@id/video_series_fragment_download_toggle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" layout="@layout/compat_switch" />
+        </RelativeLayout>
+        <View android:background="#ff444444" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip" />
+        <LinearLayout android:orientation="vertical" android:id="@id/video_series_header_video_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </LinearLayout>
+</ScrollView>

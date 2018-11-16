@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="@dimen/custom_button_neutral_small_corner_radius" />
+            <stroke android:width="1.0dip" android:color="#ff9b9b9b" />
+        </shape>
+    </item>
+    <item android:bottom="1.0dip">
+        <selector
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <item android:state_pressed="true">
+                <shape>
+                    <corners android:radius="@dimen/custom_button_neutral_small_corner_radius" />
+                    <padding android:left="@dimen/custom_button_neutral_small_padding_left_right" android:top="@dimen/custom_button_neutral_small_padding_bottom_top" android:right="@dimen/custom_button_neutral_small_padding_left_right" android:bottom="@dimen/custom_button_neutral_small_padding_bottom_top" />
+                    <stroke android:width="1.0dip" android:color="#ffd3cec2" />
+                    <gradient android:startColor="#ff686363" android:endColor="#ff686363" android:centerColor="#ffd3cec2" />
+                </shape>
+            </item>
+            <item>
+                <shape>
+                    <corners android:radius="@dimen/custom_button_neutral_small_corner_radius" />
+                    <padding android:left="@dimen/custom_button_neutral_small_padding_left_right" android:top="@dimen/custom_button_neutral_small_padding_bottom_top" android:right="@dimen/custom_button_neutral_small_padding_left_right" android:bottom="@dimen/custom_button_neutral_small_padding_bottom_top" />
+                    <stroke android:width="1.0dip" android:color="#ffd3cec2" />
+                    <gradient android:startColor="#ffd3cec2" android:endColor="#ffd3cec2" android:centerColor="#ff686363" />
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/promotion_queen" android:background="@drawable/board_promotion_selection_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_queen" android:layout_weight="1.0" />
+    <ImageView android:id="@id/promotion_bishop" android:background="@drawable/board_promotion_selection_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_bishop" android:layout_weight="1.0" />
+    <ImageView android:id="@id/promotion_knight" android:background="@drawable/board_promotion_selection_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_knight" android:layout_weight="1.0" />
+    <ImageView android:id="@id/promotion_rook" android:background="@drawable/board_promotion_selection_background" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="0.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_rook" android:layout_weight="1.0" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/spinner_pieces_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+</LinearLayout>

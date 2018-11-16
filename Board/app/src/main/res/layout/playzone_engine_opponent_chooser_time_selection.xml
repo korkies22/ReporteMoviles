@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/playzone_engine_opponent_chooser_time_selection" android:paddingLeft="15.0dip" android:paddingTop="5.0dip" android:paddingRight="15.0dip" android:paddingBottom="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:id="@id/eloLinear" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/playzone_engine_custom_opponent_chose_elo_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playzone_engine_choose_your_elo" app:textstyle="text" />
+    </LinearLayout>
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.input.CustomSeekBar android:id="@id/playzone_engine_strength_bar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="right" android:id="@id/playzone_engine_strength_textview" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:text="2000" app:textstyle="text" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginTop="10.0dip" layout="@layout/gray_line" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/playzone_engine_time_control" android:layout_weight="1.0" app:textstyle="text" />
+        <include android:layout_gravity="center_vertical" android:id="@id/playzone_engine_playwithtime_checkbox" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/compat_switch" />
+    </LinearLayout>
+    <include android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_marginLeft="8.0dip" android:layout_marginTop="10.0dip" layout="@layout/gray_line" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="10.0dip" android:text="@string/playzone_engine_basic_time" app:textstyle="text" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip">
+        <de.cisha.android.ui.patterns.input.CustomSeekBar android:id="@id/playzone_timechooser_minutes_seekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="right" android:id="@id/playzone_timechooser_minutes_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:text="60 Min" app:textstyle="text" />
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/textView3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="10.0dip" android:text="@string/playzone_engine_increment" app:textstyle="text" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="5.0dip">
+        <de.cisha.android.ui.patterns.input.CustomSeekBar android:id="@id/playzone_timechooser_increment_seekbar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="right" android:id="@id/playzone_timechooser_increment_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:text="30 sec" app:textstyle="text" />
+    </LinearLayout>
+</LinearLayout>

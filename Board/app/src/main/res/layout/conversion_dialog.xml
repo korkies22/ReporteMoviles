@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:background="@drawable/option_dialog_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/conversion_title_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:id="@id/gopremium_logo" android:paddingLeft="10.0dip" android:paddingTop="10.0dip" android:paddingRight="20.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/premium_popup_logo_chess24" android:layerType="software" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:gravity="center" android:id="@id/conversion_dialog_title" android:paddingRight="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:text="@string/premium_mobile_title" android:maxLines="2" app:textstyle="premium_dialog_title" />
+    </LinearLayout>
+    <LinearLayout android:layout_gravity="left" android:orientation="vertical" android:id="@id/conversion_dialog_content_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="15.0dip" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.buttons.CustomButtonNeutralSmall android:id="@id/dialog_cancel_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_cancel" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/conversion_dialog_sumbit_button_container" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" />
+        <ImageView android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:src="@drawable/premium_popup_rookie" android:scaleType="fitEnd" />
+    </LinearLayout>
+</LinearLayout>

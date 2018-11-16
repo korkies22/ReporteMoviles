@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="ga_sessionTimeout">900</integer>
+    <string name="ga_trackingId">UA-49208411-2</string>
+    <bool name="ga_logLevel">verbose</bool>
+</resources>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="40.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/spinner_king" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_king" />
+    <ImageView android:id="@id/spinner_queen" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_queen" />
+    <ImageView android:id="@id/spinner_bishop" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_rook" />
+    <ImageView android:id="@id/spinner_knight" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_bishop" />
+    <ImageView android:id="@id/spinner_rook" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_knight" />
+    <ImageView android:id="@id/spinner_pawn" android:layout_width="40.0dip" android:layout_height="40.0dip" android:src="@drawable/silver_white_pawn" />
+    <TextView android:textAppearance="?android:textAppearanceLarge" android:id="@id/spinner_pieces_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" />
+</LinearLayout>

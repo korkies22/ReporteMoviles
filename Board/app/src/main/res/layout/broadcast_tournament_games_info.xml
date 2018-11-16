@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center_vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/broadcast_tournament_game_info_name_player1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pavel Ponkratov" android:lines="1" custom:textstyle="table_italic" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+            <ImageView android:id="@id/broadcast_tournament_game_info_player1_flag" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="5.0dip" android:src="@drawable/flag_info_ro_ico" android:scaleType="fitCenter" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/broadcast_tournament_game_info_player1Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="GM 2605 (2 1/2)" custom:textstyle="table" />
+        </LinearLayout>
+    </LinearLayout>
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/broadcast_tournament_game_info_result_text" android:padding="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1 - 0" custom:textstyle="text" />
+    <de.cisha.android.ui.patterns.chess.widget.EngineEvaluationView android:layout_gravity="center" android:id="@id/broadcast_tournament_game_info_eval_img" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" custom:type="white_left" />
+    <LinearLayout android:orientation="vertical" android:padding="5.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/broadcast_tournament_game_info_name_player2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Simon Meyer" android:lines="1" custom:textstyle="table_italic" />
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+            <ImageView android:id="@id/broadcast_tournament_game_info_player2_flag" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginRight="5.0dip" android:scaleType="fitCenter" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/broadcast_tournament_game_info_player2Info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="IM 2542 (4 1/2)" custom:textstyle="table" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

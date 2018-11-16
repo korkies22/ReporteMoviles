@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/linearLayout1" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="75.0dip" android:layout_marginRight="10.0dip" android:layout_alignParentBottom="true" />
+    <TextView android:textSize="25.0sp" android:textColor="#ff000000" android:id="@id/tactics_pause_excercise_number" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_centerHorizontal="true" />
+    <Button android:id="@id/landingButtonLogin" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="LOGIN" android:layout_below="@id/tactics_pause_excercise_number" android:layout_alignRight="@id/linearLayout1" />
+</RelativeLayout>

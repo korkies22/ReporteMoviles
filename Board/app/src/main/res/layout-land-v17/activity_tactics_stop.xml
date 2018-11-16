@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_chess24" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.board.view.FieldView android:layout_gravity="center_vertical" android:id="@id/tactics_pause_fieldview" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentStart="true" />
+    <RelativeLayout android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_toRightOf="@id/tactics_pause_fieldview" android:layout_alignParentRight="true" android:layout_toEndOf="@id/tactics_pause_fieldview" android:layout_alignParentEnd="true">
+        <de.cisha.android.board.tactics.view.ExerciseHistoryView android:id="@id/tactics_pause_historybar" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+        <de.cisha.android.board.tactics.view.NumberExerciseViewGroup android:gravity="center_vertical" android:id="@id/numberExerciseViewGroup1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignBottom="@id/tactics_pause_historybar" android:layout_alignParentTop="true" android:layout_alignParentRight="true">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/blue_active" android:id="@id/tactics_pause_excercise_number" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" custom:textstyle="header" />
+        </de.cisha.android.board.tactics.view.NumberExerciseViewGroup>
+        <View android:id="@id/tactics_pause_exercise_history_shadow" android:background="@drawable/shadow_menu" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_below="@id/numberExerciseViewGroup1" />
+        <include android:id="@id/tactics_pause_menubar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" layout="@layout/tactics_pause_menubar" />
+        <LinearLayout android:orientation="horizontal" android:background="@drawable/shadow_menu" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_below="@id/tactics_pause_historybar" />
+        <de.cisha.android.board.tactics.view.ScrollViewWithSizeListener android:id="@id/tactics_pause_notationlist_container" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_above="@id/tactics_pause_menubar" android:layout_below="@id/tactics_pause_exercise_history_shadow">
+            <de.cisha.android.board.view.notation.NotationListView android:orientation="vertical" android:id="@id/tactics_pause_notationlist" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </de.cisha.android.board.tactics.view.ScrollViewWithSizeListener>
+        <AbsoluteLayout android:id="@id/tactics_pause_submenu_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/tactics_pause_menubar" android:layout_alignParentTop="true" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/profile_tournaments_widget_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/profile_tournaments_widget_title" android:maxLines="1" app:textstyle="widget_title" />
+    <FrameLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:id="@id/profile_tournaments_widget_tournaments_container" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.board.broadcast.view.TournamentInfoView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <de.cisha.android.board.broadcast.view.TournamentInfoView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <de.cisha.android.board.broadcast.view.TournamentInfoView android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+        <ProgressBar android:layout_gravity="center" android:id="@id/profile_tournaments_widget_progressbar" android:layout_width="wrap_content" android:layout_height="wrap_content" style="?android:progressBarStyleSmall" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:layout_gravity="center" android:id="@id/profile_tournaments_widget_error_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="No tournaments" app:textstyle="text" />
+    </FrameLayout>
+    <de.cisha.android.ui.patterns.buttons.CustomButtonAlternative android:layout_gravity="center_horizontal" android:id="@id/profile_tournaments_widget_button_view_all" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/profile_tournaments_button_view_all" />
+</merge>

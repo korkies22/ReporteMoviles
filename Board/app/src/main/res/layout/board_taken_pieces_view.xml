@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/board_taken_pieces_view_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Q.0 R.0 B.O K.0 P.0" android:maxLines="2" app:textstyle="text" />
+</merge>

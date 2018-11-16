@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:layout_gravity="center|left" android:id="@id/database_list_item_left_flag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="16.0dip" android:src="@drawable/flag_info_deu_ico" android:scaleType="fitStart" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center|left" android:id="@id/database_list_item_player_elo_left" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="2345" android:maxLines="1" android:layout_weight="20.0" app:textstyle="list_item_title" />
+    <ImageView android:layout_gravity="center|right" android:id="@id/database_list_item_right_flag" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="16.0dip" android:src="@drawable/flag_info_deu_ico" android:scaleType="fitEnd" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:gravity="center|right" android:id="@id/database_list_item_player_elo_right" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:text="1234" android:maxLines="1" android:layout_weight="20.0" app:textstyle="list_item_title" />
+</LinearLayout>

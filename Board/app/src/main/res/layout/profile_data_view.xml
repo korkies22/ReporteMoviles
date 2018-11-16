@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="horizontal" android:id="@id/profile_data_image_and_data" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+        <RelativeLayout android:layout_gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="35.0dip" android:layout_marginTop="3.0dip">
+            <de.cisha.android.view.RoundedCouchImageView android:id="@id/profile_data_image" android:layout_width="55.0dip" android:layout_height="55.0dip" android:scaleType="centerCrop" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pencil_ico" android:layout_alignRight="@id/profile_data_image" android:layout_alignBottom="@id/profile_data_image" />
+            <ProgressBar android:id="@id/profile_data_image_loadingAnimation" android:visibility="invisible" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/profile_data_nickname_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Glotzkowski" android:maxLines="1" android:drawablePadding="5.0dip" app:textstyle="text_tall_bold" />
+            <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/profile_data_fullname_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Beatritze" android:maxLines="1" app:textstyle="text_bold" />
+            <LinearLayout android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="1.0dip">
+                <ImageView android:id="@id/profile_data_country_flag" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/profile_data_image" android:layout_alignBottom="@id/profile_data_image" />
+                <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:id="@id/profile_data_country_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="DEU, Hamburg" android:maxLines="1" app:textstyle="text_small" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:id="@id/profile_data_ratings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_green" android:gravity="center_horizontal" android:id="@id/profile_data_rating_standard_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2680" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_dark_blue" android:gravity="center_horizontal" android:id="@id/profile_data_rating_blitz_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2680" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_light_blue" android:gravity="center_horizontal" android:id="@id/profile_data_rating_bullet_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2680" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/profile_rating_red" android:gravity="center_horizontal" android:id="@id/profile_data_rating_tactics_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="2680" android:maxLines="1" android:layout_weight="1.0" app:textstyle="rating" />
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="10.0dip">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rating_name_standard" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rating_name_blitz" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rating_name_bullet" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/rating_name_tactics" android:maxLines="1" android:layout_weight="1.0" app:textstyle="text_small" />
+    </LinearLayout>
+</merge>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector android:variablePadding="false" android:constantSize="true"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false" android:drawable="@drawable/setup_delete_piece_inactive" />
+    <item android:state_selected="true" android:drawable="@drawable/setup_delete_piece_active" />
+    <item android:drawable="@drawable/setup_delete_piece" />
+</selector>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/privacy_chooser_background" />
+                </shape>
+            </item>
+            <item android:top="@dimen/privacy_setting_chooser_stroke_width">
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/privacy_chooser_background" />
+                    <padding android:left="@dimen/privacy_setting_chooser_padding" android:top="@dimen/privacy_setting_chooser_padding" android:right="@dimen/privacy_setting_chooser_padding" android:bottom="@dimen/privacy_setting_chooser_padding" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_selected="false">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/privacy_chooser_background" />
+                </shape>
+            </item>
+            <item android:top="@dimen/privacy_setting_chooser_stroke_width" android:bottom="@dimen/privacy_setting_chooser_stroke_width">
+                <shape android:shape="rectangle">
+                    <solid android:color="#ffffffff" />
+                    <padding android:left="@dimen/privacy_setting_chooser_padding" android:top="@dimen/privacy_setting_chooser_padding" android:right="@dimen/privacy_setting_chooser_padding" android:bottom="@dimen/privacy_setting_chooser_padding" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

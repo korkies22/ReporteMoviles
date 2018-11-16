@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center_vertical" android:background="@color/analyse_subnavbar_background" android:paddingLeft="2.0dip" android:paddingTop="2.0dip" android:paddingRight="2.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <de.cisha.android.ui.patterns.buttons.CustomButtonNeutralSmall android:id="@id/analyze_engine_start_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:text="Start/Stop" />
+        <ImageView android:gravity="bottom|center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/analysis_divider" android:layout_weight="1.0" />
+        <LinearLayout android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff444444" android:gravity="center" android:id="@id/analyze_engine_eval" android:background="@drawable/analysis_evaluation_clip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:minWidth="70.0dip" android:text="0.0" android:maxLines="1" custom:textstyle="analyze_movelist" />
+            <TextView android:textAppearance="?android:textAppearanceMedium" android:textColor="#ff444444" android:gravity="center_horizontal" android:id="@id/analyze_engine_depth" android:background="@drawable/analysis_depth" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="60.0dip" android:text="0" android:maxLines="1" />
+        </LinearLayout>
+        <ImageView android:gravity="bottom|center" android:layout_width="0.0dip" android:layout_height="wrap_content" android:src="@drawable/analysis_divider" android:layout_weight="1.0" />
+        <de.cisha.android.ui.patterns.buttons.CustomButtonNeutralSmall android:gravity="center" android:id="@id/analyze_engine_less_variants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="2.0dip" android:minWidth="40.0dip" android:text="-" />
+        <de.cisha.android.ui.patterns.buttons.CustomButtonNeutralSmall android:gravity="center" android:id="@id/analyze_engine_more_variants" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="2.0dip" android:layout_marginRight="6.0dip" android:minWidth="40.0dip" android:text="+" />
+    </LinearLayout>
+    <View android:background="#ffd8d8d8" android:layout_width="fill_parent" android:layout_height="1.0px" />
+    <ListView android:id="@id/engine_variant_list" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center" android:id="@id/analyse_engine_mate_text" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" custom:textstyle="analyze_movelist" />
+</LinearLayout>

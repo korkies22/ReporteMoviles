@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/playzone_opponent_chooser_dialog_fragment_container" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="fill_parent" android:minWidth="500.0dip" android:minHeight="600.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/mainMenuParent" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/menu_top_left_button_group" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/chess24Blue" android:layout_gravity="center_horizontal" android:id="@id/headerText" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="10.0dip" android:text="@string/play_vs_engine" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" custom:textstyle="menuHeader" />
+        <LinearLayout android:orientation="horizontal" android:id="@id/playzone_shaddow_top" android:background="@drawable/shadow_menu" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="5.0dip" android:layout_marginTop="10.0dip" android:layout_below="@id/headerText" />
+    </RelativeLayout>
+    <FrameLayout android:layout_gravity="center_horizontal" android:id="@id/MainMenuRoot" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" />
+</LinearLayout>

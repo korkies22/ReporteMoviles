@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<de.cisha.android.board.database.view.DatabaseListItemView android:id="@id/database_list_item_view" android:background="@drawable/broadcast_tournament_list_item_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layerType="hardware"
+  xmlns:android="http://schemas.android.com/apk/res/android" />

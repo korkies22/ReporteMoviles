@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/bg_chess24" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <FrameLayout android:id="@id/analyse_viewgroup_above_fieldview" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <de.cisha.android.board.view.FieldView android:id="@id/analyse_fieldView" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/analyse_viewgroup_above_fieldview" android:layout_centerHorizontal="true" />
+    <LinearLayout android:id="@id/analyse_menu_bar_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/analyse_fieldView">
+        <de.cisha.android.ui.patterns.navigationbar.MenuBar android:layout_gravity="center|left" android:id="@id/analyse_navigation_bar" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+        <de.cisha.android.ui.patterns.navigationbar.MenuBar android:layout_gravity="center|right" android:id="@id/analyse_moves_bar" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <de.cisha.android.ui.patterns.navigationbar.MenuBarItem android:id="@id/analyse_navigation_bar_item_previous" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:icon_drawable_disabled="@drawable/analysis_arrow_left_inactive" custom:icon_drawable_selected="@drawable/analysis_arrow_left_active" custom:icon_drawable_usual="@drawable/analysis_arrow_left" custom:selectable="false" />
+            <de.cisha.android.ui.patterns.navigationbar.MenuBarItem android:id="@id/analyse_navigation_bar_item_next" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:icon_drawable_disabled="@drawable/analysis_arrow_right_inactive" custom:icon_drawable_selected="@drawable/analysis_arrow_right_active" custom:icon_drawable_usual="@drawable/analysis_arrow_right" custom:selectable="false" />
+        </de.cisha.android.ui.patterns.navigationbar.MenuBar>
+    </LinearLayout>
+    <ImageView android:id="@id/analyse_navigation_bar_border" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" android:layout_below="@id/analyse_menu_bar_container" />
+    <LinearLayout android:orientation="horizontal" android:id="@id/analyse_navigation_bar_content_group" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/analyse_navigation_bar_border" />
+    <AbsoluteLayout android:id="@id/analyse_navigation_bar_submenu_group" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/analyse_menu_bar_container" />
+</RelativeLayout>

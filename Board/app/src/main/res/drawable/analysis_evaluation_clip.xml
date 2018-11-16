@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <nine-patch android:src="@drawable/analysis_evaluation_white" />
+    </item>
+    <item>
+        <clip android:gravity="bottom" android:clipOrientation="vertical">
+            <nine-patch android:src="@drawable/analysis_evaluation_black" />
+        </clip>
+    </item>
+</layer-list>

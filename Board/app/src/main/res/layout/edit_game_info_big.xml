@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:background="@drawable/bg_chess24" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.board.view.FieldView android:id="@id/edit_game_info_fieldview" android:layout_width="200.0dip" android:layout_height="200.0dip" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rookie_edit_info_big" />
+        </LinearLayout>
+        <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_game_info_title" custom:hintText="@string/analysis_edit_game_title" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_game_info_event" custom:hintText="@string/analysis_edit_game_event" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomEditDate android:id="@id/edit_game_info_date" custom:hintText="@string/analysis_edit_game_date" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_game_info_site" custom:hintText="@string/analysis_edit_game_site" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_game_info_white" custom:hintText="@string/analysis_edit_game_white" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_game_info_white_elo" custom:hintText="@string/analysis_edit_game_rating_white" style="@style/CustomInputStyle" />
+        <de.cisha.android.board.profile.view.CustomCountryChoser android:id="@id/edit_game_info_white_country" custom:hintText="@string/analysis_edit_game_country_white" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_game_info_black" custom:hintText="@string/analysis_edit_game_black" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomEditText android:id="@id/edit_game_info_black_elo" custom:hintText="@string/analysis_edit_game_rating_black" style="@style/CustomInputStyle" />
+        <de.cisha.android.board.profile.view.CustomCountryChoser android:id="@id/edit_game_info_black_country" custom:hintText="@string/analysis_edit_game_country_black" style="@style/CustomInputStyle" />
+        <de.cisha.android.ui.patterns.input.CustomSpinner android:id="@id/edit_game_info_result" custom:hintText="@string/analysis_edit_game_result" style="@style/CustomInputStyle" />
+    </LinearLayout>
+</ScrollView>

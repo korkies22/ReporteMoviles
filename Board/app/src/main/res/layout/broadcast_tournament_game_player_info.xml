@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:gravity="center|left" android:id="@id/broadcast_tournament_game_player_name" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginBottom="5.0dip" android:text="" android:maxLines="1" android:layout_alignParentLeft="true" app:textstyle="text" />
+    <ImageView android:layout_gravity="center_vertical" android:id="@id/broadcast_tournament_game_player_flag" android:layout_width="16.0dip" android:layout_height="16.0dip" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" android:scaleType="fitCenter" android:layout_below="@id/broadcast_tournament_game_player_name" android:layout_alignParentLeft="true" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:ellipsize="end" android:gravity="center|left" android:layout_gravity="center_vertical" android:id="@id/broadcast_tournament_game_player_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:text="" android:maxLines="1" android:layout_toRightOf="@id/broadcast_tournament_game_player_flag" android:layout_alignBottom="@id/broadcast_tournament_game_player_flag" app:textstyle="text" />
+</merge>

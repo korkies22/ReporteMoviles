@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_auto_replay_game_speeds">
+        <item>pfeilschnell</item>
+        <item>schnell</item>
+        <item>mittel</item>
+        <item>langsam</item>
+    </string-array>
+    <string-array name="settings_move_animation_speeds">
+        <item>Keine Animation</item>
+        <item>schnell</item>
+        <item>mittel</item>
+        <item>langsam</item>
+    </string-array>
+</resources>

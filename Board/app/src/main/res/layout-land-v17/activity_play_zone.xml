@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="#ffeeeeee" android:layout_width="fill_parent" android:layout_height="fill_parent" android:keepScreenOn="true"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/fieldViewFrame" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentBottom="true">
+        <de.cisha.android.board.view.FieldView android:id="@id/fieldView" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </LinearLayout>
+    <de.cisha.android.board.playzone.remote.view.FlyInOutView android:id="@id/playzone_disconnected_device_flyinoutview" android:background="@drawable/playzone_disconnected_device_background" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_toRightOf="@id/fieldViewFrame" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <de.cisha.android.board.playzone.remote.view.DisconnectedDeviceView android:id="@id/playzone_disconnected_device_disconnecteddeviceview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </de.cisha.android.board.playzone.remote.view.FlyInOutView>
+    <de.cisha.android.board.playzone.view.MoveConfirmationView android:id="@id/playzone_move_confirmation_view" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_toRightOf="@id/fieldViewFrame" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" android:layout_toEndOf="@id/fieldViewFrame" android:layout_alignParentEnd="true" />
+    <de.cisha.android.board.playzone.remote.view.FlyInOutView android:id="@id/playzone_disconnected_opponent_view" android:background="@drawable/playzone_disconnected_device_background_reconnected" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="25.0dip" android:layout_toRightOf="@id/fieldViewFrame" android:layout_alignParentRight="true" android:layout_alignParentBottom="true">
+        <de.cisha.android.board.playzone.remote.view.DisconnectedOpponentView android:id="@id/playzone_disconnected_opponent_disconnectedopponentview" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    </de.cisha.android.board.playzone.remote.view.FlyInOutView>
+    <LinearLayout android:orientation="horizontal" android:id="@id/playzone_clock_container" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/fieldViewFrame">
+        <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@id/playzone_button_drawOffer" android:background="@drawable/playzone_button_background_draw_resign" android:layout_width="0.0dip" android:layout_height="51.0dip" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/playzone_button_text_drawoffer_disabled" android:gravity="center" android:id="@id/playzone_button_drawOffer_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="3.0dip" android:text="@string/offer_draw" android:drawableLeft="@drawable/playzone_draw_grey" android:drawablePadding="6.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/playzone_button_draw_divider" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/playzone_shaddow_draw" android:background="#22000000" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <de.cisha.android.board.playzone.view.ChessClockView android:orientation="horizontal" android:id="@id/playzone_clocks" android:background="@drawable/playzone_clock_background" android:layout_width="130.0dip" android:layout_height="51.0dip" />
+        </LinearLayout>
+        <LinearLayout android:gravity="bottom|center" android:orientation="vertical" android:id="@id/playzone_button_resign" android:background="@drawable/playzone_button_background_draw_resign" android:layout_width="0.0dip" android:layout_height="51.0dip" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="center" android:id="@id/playzone_button_resign_text" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_margin="3.0dip" android:text="@string/resign" android:drawableLeft="@drawable/playzone_resign_grey" android:drawablePadding="6.0dip" custom:textstyle="text" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/playzone_draw_resign_bottom_divider" android:background="#fff2f2f2" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/playzone_shaddow_resign" android:background="#22000000" android:layout_width="fill_parent" android:layout_height="2.0dip" />
+        </LinearLayout>
+    </LinearLayout>
+    <include android:id="@id/playzone_layoutPlayerNames" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/fieldViewFrame" android:layout_below="@id/playzone_clock_container" layout="@layout/activity_play_zone_layoutplayernames" />
+    <include android:id="@id/playzone_taken_piece_view" android:paddingLeft="5.0dip" android:paddingRight="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_toRightOf="@id/fieldViewFrame" android:layout_below="@id/playzone_layoutPlayerNames" layout="@layout/activity_play_zone_taken_piece_view" />
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/playzone_taken_piece_view" android:layout_alignLeft="@id/playzone_taken_piece_view">
+        <de.cisha.android.board.view.notation.NotationListVerticalScrollView android:tag="MoveListView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip" android:fillViewport="true" />
+    </LinearLayout>
+    <TextView android:textSize="30.0dip" android:gravity="center" android:id="@id/playzone_text_status" android:background="@color/contextMenuBackground" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="" />
+</RelativeLayout>

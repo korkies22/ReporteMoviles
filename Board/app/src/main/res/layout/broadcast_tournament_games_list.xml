@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ListView android:id="@id/broadcast_games_list_view" android:layout_width="fill_parent" android:layout_height="fill_parent" android:divider="#ffd7d7d7" android:dividerHeight="1.0dip" />
+    <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/broadcast_games_list_round_selection_view" android:background="@drawable/broadcast_tournament_round_navigation_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <ImageView android:id="@id/broadcast_games_list_round_selection_previous_fast_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/broadcast_double_arrow_left_selector" />
+        <ImageView android:id="@id/broadcast_games_list_round_selection_previous_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/broadcast_arrow_left_selector" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:gravity="center_horizontal" android:id="@id/broadcast_games_list_round_selection_text" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="13.0" app:textstyle="text" />
+        <ImageView android:id="@id/broadcast_games_list_round_selection_next_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/broadcast_arrow_right_selector" />
+        <ImageView android:id="@id/broadcast_games_list_round_selection_next_fast_button" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/broadcast_double_arrow_right_selector" />
+    </LinearLayout>
+</RelativeLayout>

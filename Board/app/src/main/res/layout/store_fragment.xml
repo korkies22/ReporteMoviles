@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:orientation="vertical" android:id="@id/store_subscription_container" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    <LinearLayout android:orientation="vertical" android:id="@id/store_subscription_cancel_view" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <include android:layout_width="fill_parent" android:layout_height="1.0px" layout="@layout/list_item_divider" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:gravity="left" android:background="#ffffffff" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:text="@string/store_cancel_subscription" android:drawableRight="@drawable/analysis_arrow_right" android:drawablePadding="5.0dip" app:textstyle="text" />
+        <include android:layout_width="fill_parent" android:layout_height="1.0px" layout="@layout/list_item_divider" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView android:id="@id/store_recycler_view" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:id="@id/store_button_buy_premium_web" android:background="@color/chess24_premium_web" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/store_button_c24_premium" android:drawableLeft="@drawable/c24store_web_premium_ico" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" app:textstyle="text" />
+        </LinearLayout>
+        <View android:id="@id/store_button_divider" android:layout_width="5.0dip" android:layout_height="fill_parent" />
+        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/store_button_buy_premium_mobile" android:background="@color/chess24_premium_light" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+            <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:gravity="center_vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/store_button_mobile_premium" android:drawableLeft="@drawable/c24store_mobile_premium_ico" android:drawablePadding="5.0dip" android:layout_alignParentLeft="true" app:textstyle="text" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

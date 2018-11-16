@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.cisha.android.board.broadcast.statistics.view.BroadcastTeamView android:id="@id/team_fragment_team_data_view" android:background="@drawable/profile_background_dashboard1" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentTop="true" />
+    <android.support.v4.view.ViewPager android:id="@id/team_fragment_view_pager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/team_fragment_team_data_view">
+        <android.support.v4.view.PagerTitleStrip android:textColor="#ff444444" android:layout_gravity="top" android:id="@id/team_fragment_pager_title_strip" android:background="#ffffffff" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+    </android.support.v4.view.ViewPager>
+</RelativeLayout>

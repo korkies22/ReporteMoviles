@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ViewSwitcher android:id="@id/setup_board_piecebar_viewswitcher" android:layout_width="fill_parent" android:layout_height="fill_parent">
+            <include android:id="@id/setup_board_piecebar_pieces_1" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/setup_board_piecebar_pieces" />
+        </ViewSwitcher>
+        <de.cisha.android.board.setup.view.DeletePieceImageView android:id="@id/setup_board_piecebar_deletepiece" android:paddingLeft="10.0dip" android:paddingTop="6.0dip" android:paddingRight="20.0dip" android:paddingBottom="6.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/setup_delete_piece_statelist" android:scaleType="centerInside" />
+    </FrameLayout>
+    <RelativeLayout android:gravity="center" android:orientation="horizontal" android:id="@id/setup_board_piecebar_overlay" android:background="@drawable/bg_chess24" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <TextView android:textSize="20.0sp" android:textColor="#ff004a9e" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/setup_board_drag_here_to_delete" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

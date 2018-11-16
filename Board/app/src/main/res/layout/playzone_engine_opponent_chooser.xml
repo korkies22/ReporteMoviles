@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView android:id="@id/playzone_engine_opponent_chooser_scrollview" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <de.cisha.android.board.playzone.engine.view.EngineOpponentView android:id="@id/playzone_engine_opponent_kevin" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+            <de.cisha.android.board.playzone.engine.view.EngineOpponentView android:id="@id/playzone_engine_opponent_claudia" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+            <de.cisha.android.board.playzone.engine.view.EngineOpponentView android:id="@id/playzone_engine_opponent_guru" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            <ImageView android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+            <de.cisha.android.board.playzone.engine.view.EngineOpponentChooserTimeSelectionView android:id="@id/playzone_engine_opponent_chooser_time_selection_view" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout android:orientation="vertical" android:id="@id/playzone_engine_opponent_chooser_color_selection" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+            <LinearLayout android:id="@id/playzone_engine_opponent_color_white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+                <ImageView android:textSize="0.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/playzone_engine_opponent_knight_white" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/playzone_engine_opponent_color_black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+                <ImageView android:textSize="0.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/playzone_engine_opponent_knight_black" android:layout_weight="1.0" />
+            </LinearLayout>
+            <LinearLayout android:id="@id/playzone_engine_opponent_color_random" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+                <ImageView android:textSize="0.0sp" android:layout_width="0.0dip" android:layout_height="fill_parent" android:src="@drawable/playzone_engine_opponent_knight_random" android:layout_weight="1.0" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+        <de.cisha.android.ui.patterns.buttons.CustomButtonPositive android:layout_gravity="center_horizontal" android:id="@id/playzone_engine_opponent_chooser_playnow_button" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="3.0dip" android:text="@string/playzone_engine_button_title_play_now" />
+    </LinearLayout>
+</merge>

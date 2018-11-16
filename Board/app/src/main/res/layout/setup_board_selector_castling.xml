@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <de.cisha.android.ui.patterns.input.CustomCheckBox android:id="@id/setup_board_check_castling_white000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/setup_board_white_long_castling" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+    <de.cisha.android.ui.patterns.input.CustomCheckBox android:id="@id/setup_board_check_castling_white00" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/setup_board_white_short_castling" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+    <de.cisha.android.ui.patterns.input.CustomCheckBox android:id="@id/setup_board_check_castling_black000" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/setup_board_black_long_castling" />
+    <ImageView android:layout_width="fill_parent" android:layout_height="wrap_content" android:src="@drawable/dialog_list_seperator" android:scaleType="fitXY" />
+    <de.cisha.android.ui.patterns.input.CustomCheckBox android:id="@id/setup_board_check_castling_black00" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/setup_board_black_short_castling" />
+</LinearLayout>

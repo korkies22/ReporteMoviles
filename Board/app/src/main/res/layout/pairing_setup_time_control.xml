@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:gravity="center" android:orientation="vertical" android:padding="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" style="@style/OutlineGray"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.board.playzone.view.TimeControlView android:id="@id/pairing_setup_time_control_view" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffcccccc" android:id="@id/pairing_setup_time_control_type" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Blitz" app:textstyle="table_italic" />
+</LinearLayout>

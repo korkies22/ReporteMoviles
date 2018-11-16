@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <solid android:color="#ff0283fb" />
+                </shape>
+            </item>
+            <item android:left="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />
+                    <gradient android:startColor="#ff343f8e" android:endColor="#ff0a66ae" android:angle="270.0" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_selected="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <solid android:color="#ff0283fb" />
+                </shape>
+            </item>
+            <item android:left="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />
+                    <gradient android:startColor="#ff0a66ae" android:endColor="#ff343f8e" android:angle="270.0" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <solid android:color="#ffaaaaaa" />
+                </shape>
+            </item>
+            <item android:left="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />
+                    <gradient android:startColor="#ff7d7d7d" android:endColor="#ffa0a0a0" android:angle="270.0" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <solid android:color="#ffaaaaaa" />
+                </shape>
+            </item>
+            <item android:left="2.0dip" android:right="2.0dip" android:bottom="2.0dip">
+                <shape android:shape="rectangle">
+                    <corners android:topLeftRadius="0.0dip" android:topRightRadius="0.0dip" android:bottomLeftRadius="0.0dip" android:bottomRightRadius="0.0dip" />
+                    <padding android:left="5.0dip" android:top="5.0dip" android:right="5.0dip" android:bottom="5.0dip" />
+                    <gradient android:startColor="#ff7d7d7d" android:endColor="#ffa0a0a0" android:angle="90.0" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

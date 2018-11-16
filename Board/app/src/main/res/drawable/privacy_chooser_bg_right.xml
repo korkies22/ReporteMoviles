@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <stroke android:width="@dimen/privacy_setting_chooser_stroke_width" android:color="@color/privacy_chooser_background" />
+            <solid android:color="@color/privacy_chooser_background" />
+            <padding android:left="@dimen/privacy_setting_chooser_padding" android:top="@dimen/privacy_setting_chooser_padding" android:right="@dimen/privacy_setting_chooser_padding" android:bottom="@dimen/privacy_setting_chooser_padding" />
+            <corners android:topRightRadius="@dimen/privacy_setting_chooser_radius" android:bottomRightRadius="@dimen/privacy_setting_chooser_radius" />
+        </shape>
+    </item>
+    <item android:state_selected="false">
+        <shape android:shape="rectangle"
+          xmlns:android="http://schemas.android.com/apk/res/android">
+            <stroke android:width="@dimen/privacy_setting_chooser_stroke_width" android:color="@color/privacy_chooser_background" />
+            <solid android:color="#ffffffff" />
+            <padding android:left="@dimen/privacy_setting_chooser_padding" android:top="@dimen/privacy_setting_chooser_padding" android:right="@dimen/privacy_setting_chooser_padding" android:bottom="@dimen/privacy_setting_chooser_padding" />
+            <corners android:topRightRadius="@dimen/privacy_setting_chooser_radius" android:bottomRightRadius="@dimen/privacy_setting_chooser_radius" />
+        </shape>
+    </item>
+</selector>

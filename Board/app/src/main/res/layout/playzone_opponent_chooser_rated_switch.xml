@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="horizontal" android:paddingLeft="5.0dip" android:paddingTop="0.0dip" android:paddingRight="5.0dip" android:paddingBottom="0.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:layout_weight="1.0">
+        <de.cisha.android.ui.patterns.text.CustomTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playzone_opponent_chooser_rated_game" app:textstyle="text" />
+        <de.cisha.android.ui.patterns.text.CustomTextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/playzone_opponent_chooser_rated_games_will_influence_your_chess24_ratings" app:textstyle="text_small" />
+    </LinearLayout>
+    <include android:layout_gravity="center_vertical" android:id="@id/playzone_engine_switch_rate_game" android:layout_width="wrap_content" android:layout_height="wrap_content" layout="@layout/compat_switch" />
+</LinearLayout>

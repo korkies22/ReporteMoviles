@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:id="@id/playzone_dialog_background" android:background="@drawable/playzone_dialog_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="10.0" />
+    <FrameLayout android:layout_gravity="center" android:id="@id/playzone_waiting_button_frame" android:background="@android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:layout_gravity="center" android:id="@id/playzone_waiting_button_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/loader" />
+        <ImageView android:layout_gravity="center" android:id="@id/playzone_waiting_button_circle" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/loader_balken" />
+        <TextView android:textSize="26.0dip" android:layout_gravity="center" android:id="@id/playzone_waiting_button_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="STOP" />
+    </FrameLayout>
+    <LinearLayout android:orientation="vertical" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="40.0">
+        <de.cisha.android.board.playzone.view.TimeControlView android:layout_gravity="center_horizontal" android:id="@id/playzone_waiting_timecontrol_viewgroup" android:paddingTop="15.0dip" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/playzone_timechooser_item" android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/playzone_waiting_message" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="30.0dip" android:layout_marginRight="30.0dip" android:text="@string/playzone_waiting_for_opponent" />
+        <LinearLayout android:layout_gravity="center_horizontal" android:orientation="vertical" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+            <de.cisha.android.ui.patterns.buttons.CustomButtonPositive android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/playzone_choosedifferenttime_btn" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/playzone_choosedifferenttime" />
+            <de.cisha.android.ui.patterns.buttons.CustomButtonPositive android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/playzone_waiting_btn_try_again" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/playzone_new_try_button" />
+            <de.cisha.android.ui.patterns.buttons.CustomButtonAlternative android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/playzone_waiting_btn_vs_computer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/playzone_play_vs_computer_button" />
+            <de.cisha.android.ui.patterns.buttons.CustomButtonNeutral android:gravity="center_horizontal" android:layout_gravity="center_horizontal" android:id="@id/playzone_waiting_btn_network_settings" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/playzone_system_networksettings" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

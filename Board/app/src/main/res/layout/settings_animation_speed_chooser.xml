@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/settings_speed_chooser_headline" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:text="" android:maxLines="1" app:textstyle="list_item_title" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="@color/chess24Blue" android:gravity="center" android:id="@id/settings_animation_speed_chooser_text" android:background="@android:drawable/editbox_background_normal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" android:text="fast" android:maxLines="1" android:drawableLeft="@drawable/settings_animation_speed_chooser_background_levellist" android:drawablePadding="5.0dip" app:textstyle="text" />
+</LinearLayout>

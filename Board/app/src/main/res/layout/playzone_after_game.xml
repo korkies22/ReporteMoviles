@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.navigationbar.MenuBar android:id="@id/playzone_after_game_menubar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
+        <de.cisha.android.ui.patterns.navigationbar.MenuBarItem android:id="@id/playzone_after_game_menubar_rematch" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <de.cisha.android.ui.patterns.navigationbar.MenuBarItem android:id="@id/playzone_after_game_menubar_newgame" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+        <de.cisha.android.ui.patterns.navigationbar.MenuBarItem android:id="@id/playzone_after_game_menubar_analyse" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+    </de.cisha.android.ui.patterns.navigationbar.MenuBar>
+    <AbsoluteLayout android:id="@id/playzone_after_game_container_for_dialog" android:paddingTop="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/playzone_after_game_menubar" />
+</merge>

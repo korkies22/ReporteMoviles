@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="#ff000000" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:gravity="center" android:id="@id/video_stream_surface_container" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <de.cisha.android.ui.patterns.text.CustomTextView android:textColor="#ffffffff" android:id="@id/video_stream_buffer" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" app:textstyle="text_tall" />
+    <ImageView android:id="@id/video_stream_fullscreen" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="40.0dip" android:layout_marginRight="20.0dip" android:src="@drawable/fullscreen_button_statelist" android:layout_alignParentTop="true" android:layout_alignParentRight="true" />
+    <ImageView android:id="@id/video_stream_error_image" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/rookie_no_internet" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+</RelativeLayout>

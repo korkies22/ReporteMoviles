@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<de.cisha.android.ui.patterns.navigationbar.MenuBar android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.navigationbar.MenuBarItem android:id="@id/tactics_exercise_menubaritem_hint" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:icon_drawable_selected="@drawable/tactics_lasche_hint_active" custom:icon_drawable_usual="@drawable/tactics_lasche_hint" custom:selectable="false" custom:selection_group="0" custom:text="@string/tactics_trainer_hint" />
+    <de.cisha.android.ui.patterns.navigationbar.MenuBarItem android:id="@id/tactics_exercise_menubaritem_stop" android:layout_width="wrap_content" android:layout_height="wrap_content" custom:icon_drawable_selected="@drawable/tactics_lasche_stop_active" custom:icon_drawable_usual="@drawable/tactics_lasche_stop" custom:selectable="true" custom:selection_group="1" custom:text="@string/tactics_trainer_stop_excercise" />
+</de.cisha.android.ui.patterns.navigationbar.MenuBar>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.cisha.android.ui.patterns.text.CustomTextView android:id="@id/settings_item_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:text="@string/board_settings_theme_title" android:maxLines="1" app:textstyle="list_item_title" />
+    <LinearLayout android:background="@drawable/settings_boardtheme_items_gradient_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="30.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/settings_boardtheme_board_silver" android:background="@drawable/blue_selection_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_board_silver" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/settings_boardtheme_board_wood" android:background="@drawable/blue_selection_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_board_wood" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/settings_boardtheme_board_green" android:background="@drawable/blue_selection_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_board_green" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center_horizontal" android:id="@id/settings_boardtheme_selection_lock" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ImageView android:background="@drawable/settings_boardtheme_selection_lock_background" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_boardtheme_selection_lock_selector" />
+    </LinearLayout>
+    <LinearLayout android:background="@drawable/settings_boardtheme_items_gradient_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:minHeight="30.0dip">
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/settings_boardtheme_piece_silver" android:background="@drawable/blue_selection_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_pieces_silver" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/settings_boardtheme_piece_wood" android:background="@drawable/blue_selection_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_pieces_woody" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_horizontal" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:id="@id/settings_boardtheme_piece_green" android:background="@drawable/blue_selection_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/settings_pieces_green" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
