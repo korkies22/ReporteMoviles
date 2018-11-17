@@ -8,19 +8,11 @@
     <title>uHost</title>
     <link rel="shortcut icon" href="../favicon.png">
     <link rel="stylesheet" href="../shared.css">
-    <link rel="stylesheet" href="packages.css">
+    <link rel="stylesheet" href="connectivity.css">
 </head>
 
 
 <body>
-        <div class="backdrop"></div>
-        <div class="modal">
-            <h1 class="modal__title">Do you want to continue?</h1>
-            <div class="modal__actions">
-                <a href="start-hosting/index.html" class="modal__action">Yes!</a>
-                <button class="modal__action modal__action--negative" type="button">No!</button>
-            </div>
-        </div>
         <header class="main-header">
             <div>
                 <button class="toggle-button">
@@ -63,44 +55,33 @@
         </ul>
     </nav>
     <main>
-        <section class="package" id="plus">
-            <a href="#">
-                <h1 class="package__title">Our PLUS Plan</h1>
-                <h2 class="package__badge">RECOMMENDED</h2>
-                <h2 class="package__subtitle">The most popular choice of our customers.</h2>
-                <p class="package__info">Benefit from increased storage and faster support to ensure that your mission-critical data and applications
-                    are always available!</p>
-            </a>
-        </section>
-        <section class="package" id="free">
-            <a href="#">
-                <h1 class="package__title">Our FREE Plan</h1>
-                <h2 class="package__subtitle">An extremely solid start into our hosting world.</h2>
-                <p class="package__info">Get started immediately at zero cost!</p>
-            </a>
-        </section>
-        <div class="clearfix"></div>
-        <section class="package" id="premium">
-            <a href="#">
-                <h1 class="package__title">Our PREMIUM Plan</h1>
-                <h2 class="package__subtitle">All your enterprise needs. Instant support, guaranteed uptime. </h2>
-                <p class="package__info">The best solution for small to large enterprises. Because hosting shouldn't be in the way!</p>
-            </a>
+        <section id="plans">
+            <h1 class="section-title">Eventual connectivity at login screen</h1>
+            <div class="plan__list">
+                <article class="plan">
+                    <h1 class="plan__title">Good eventual connectivity example</h1>
+                    <img class="image_example" src="images/good_ec_1.png"/>
+                        <p class="plan__feature">If the user starts the application without internet, the "login" button shows a popup indicating the lack of internet. This message is clear about the situation so the user can react about it.</p>
+                        <p class="plan__feature">Another thing to mention is that the feature "continue as guess" functions without problems when there is no internet, as it should be.</p>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">Bad eventual connectivity example</h1>
+                    <img class="image_example" src="images/bad_ec_1.png"/>
+                    <h3>Your enterprise solution.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">10 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">Unlimited Storage</li>
+                        <li class="plan__feature">Priority Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
-    <footer class="main-footer">
-        <nav>
-            <ul class="main-footer__links">
-                <li class="main-footer__link">
-                    <a href="#">Support</a>
-                </li>
-                <li class="main-footer__link">
-                    <a href="#">Terms of Use</a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
-    <script src="../shared.js"></script>
+    <script src="shared.js"></script>
 </body>
 
 </html>

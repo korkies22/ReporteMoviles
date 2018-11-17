@@ -110,8 +110,6 @@ main {
 @media (min-width: 40rem) {
     main {
       max-width: 1500px;
-      margin-left: auto;
-      margin-right: auto;
     }
 }
 

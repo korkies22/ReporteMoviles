@@ -41,11 +41,30 @@
   text-align: center;
 }
 
+.image_chess {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image_chess--image {
+  margin: 1rem 1rem;
+  display: inline-block;
+  max-width: 45%;
+}
+
+.image_chess--description {
+  margin: 1rem 1rem;
+  display: inline-block;
+  max-width: 45%;
+}
+
+
 .plan {
   background: #d5ffdc;
   text-align: center;
   padding: 1rem;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0.5rem;
   width: 100%;
 }
 
@@ -97,9 +116,7 @@
   }
 
   .plan {
-    width: 30%;
     min-width: 13rem;
-    max-width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
