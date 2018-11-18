@@ -107,12 +107,6 @@ main {
     color: #bbb;
 }
 
-@media (min-width: 40rem) {
-    main {
-      max-width: 1500px;
-    }
-}
-
 @media (min-width: 1500px) {
     .package {
       border-left: 4px solid #0e4f1f;

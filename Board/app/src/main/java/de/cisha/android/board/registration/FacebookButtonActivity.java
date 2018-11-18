@@ -93,6 +93,7 @@ public abstract class FacebookButtonActivity extends SingleScreenFragmentActivit
         LoginManager.getInstance().registerCallback(FacebookButtonActivity._callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onCancel() {
+                FacebookButtonActivity.this.hideDialogWaiting(); // IMPLEMENT THIS
                 FacebookButtonActivity.this.facebookLoginFailed(APIStatusCode.API_OK, "Facebook login cancelled.", null);
             }
             

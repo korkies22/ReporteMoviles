@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uHost</title>
+    <title>Reporte</title>
     <link rel="shortcut icon" href="../favicon.png">
     <link rel="stylesheet" href="../shared.css">
     <link rel="stylesheet" href="connectivity.css">
@@ -61,22 +61,61 @@
                 <article class="plan">
                     <h1 class="plan__title">Good eventual connectivity example</h1>
                     <img class="image_example" src="images/good_ec_1.png"/>
-                        <p class="plan__feature">If the user starts the application without internet, the "login" button shows a popup indicating the lack of internet. This message is clear about the situation so the user can react about it.</p>
-                        <p class="plan__feature">Another thing to mention is that the feature "continue as guess" functions without problems when there is no internet, as it should be.</p>
+                    <p class="plan__feature">If the user starts the application without internet, the "login" button shows a popup indicating the lack of internet. This message is clear about the situation so the user can react about it.</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/login_failed.png"/>           
+                    <p class="plan__feature">For login and create account options, the onFailed method of the request is overridden, there they display the error dialog seen in the image</p>
                 </article>
                 <article class="plan">
                     <h1 class="plan__title">Bad eventual connectivity example</h1>
                     <img class="image_example" src="images/bad_ec_1.png"/>
-                    <h3>Your enterprise solution.</h3>
-                    <ul class="plan__features">
-                        <li class="plan__feature">10 Workspaces</li>
-                        <li class="plan__feature">Unlimited Traffic</li>
-                        <li class="plan__feature">Unlimited Storage</li>
-                        <li class="plan__feature">Priority Support</li>
-                    </ul>
-                    <div>
-                        <button class="button">CHOOSE PLAN</button>
-                    </div>
+                    <p class="plan__feature">However, if the "login with facebook" button is clicked and there is no internet. A loading dialog appears and never dissapears.</p>
+                    <p class="plan__feature">To make things worse, the user can not dismiss the dialog unless they close the app and start it again.</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/login_fb.png"/>                    
+                    <img class="image_code" src="images/show_dialog_waiting.png"/>
+                    <p class="plan__feature">In the method that they are using to request facebook access they show a dialog with the login screen. In there, they set an atribute called "isCancellable" to false. This way, they user is not able to cancel the dialog</p>
+                    <p class="plan__feature">More important however, is that there is no "dismissDialog" in any other of the facebook methods, like "onFailed"</p>
+                    <h1 class="plan__title">What should they do?</h1>
+                    <img class="image_code" src="images/show_dialog_waiting_suggestion.png"/>      
+                    <p class="plan__feature">They have a method called hideDialogWaiting, which they execute when the onSuccess method is called. However, if the onFailed method is called, the hideDialogWaiting method is not called, and therefore the dialog is stuck there forever.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="plans">
+            <h1 class="section-title">Eventual connectivity at main activity</h1>
+            <div class="plan__list">
+                <article class="plan">
+                        <h1 class="plan__title">Good eventual connectivity example</h1>
+                        <img class="image_example" src="images/video_cached.png"/>  
+                        <p class="plan__feature">When there is a video already downloaded (marked with a "available without connection"), the user can access it when there is no internet without problems. Therefore, the application offers some sort of workaround.</p>
+                        <h1 class="plan__title">Why is this happening?</h1>     
+                        <img class="image_code" src="images/network_check.png"/>
+                        <img class="image_code" src="images/network_check2.png"/>    
+                        <p class="plan__feature">The video Fragment checks if there is internet connection and loads the videos. However, in any case it tries to load the videos on cache with the loadOfflineSeries method</p>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">Bad eventual connectivity example</h1>
+                    <img class="image_example" src="images/main_news.png"/>
+                    <img class="image_example" src="images/main_reload.png"/>
+                    <p class="plan__feature">However, when there is no content or in the news section. When the user goes there without internet, only a white screen or a simple reload button appears. In the case of the news section, when there was content and the user reloads it without internet, the content goes away and a white screen appears.</p>
+                    <h1 class="plan__title">Why is this happening?</h1>        
+                    <p class="plan__feature">Besides the methods previously shown. There is not a verification about wether there are any videos or not. So when there are no videos, nothing special is shown</p>
+                    <h1 class="plan__title">What should they do?</h1>
+                    <img class="image_code" src="images/show_dialog_waiting_suggestion.png"/>      
+                    <p class="plan__feature">They have a method called hideDialogWaiting, which they execute when the onSuccess method is called. However, if the onFailed method is called, the hideDialogWaiting method is not called, and therefore the dialog is stuck there forever.</p>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">Bad eventual connectivity example</h1>
+                    <img class="image_example" src="images/main_play_spin.png"/>
+                    <p class="plan__feature">In the play now fragment, a loading spinner appears when there is no internet connection. This spinner is never removed nor another message appear. However, in the top bar if the user selects offline play, then the cpu available options appear.</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/online_oponents_loading.png"/>               
+                    <p class="plan__feature">The app sets an spinner and then tries to load the oponents with an http call. However, if the request failed then the only action taken is to do not let the user try to refresh it</p>
+                    <h1 class="plan__title">What should they do?</h1>
+                    <img class="image_code" src="images/online_oponents_sugestion.png"/>      
+                    <p class="plan__feature">They have a method called hideDialogWaiting, which they execute when the onSuccess method is called. However, if the onFailed method is called, the hideDialogWaiting method is not called, and therefore the dialog is stuck there forever.</p>
                 </article>
             </div>
         </section>

@@ -337,16 +337,14 @@ main {
   .plan__list { 
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
+    align-items: flex-start;
   }
 
   .plan {
     min-width: 40rem;
     max-width: 45rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+
   }
 
   .plan--highlighted {
@@ -358,5 +356,10 @@ main {
 
 .image_example {
   width:315px;
+  margin: 1rem auto;
+}
+
+.image_code {
+  width:100%;
   margin: 1rem auto;
 }

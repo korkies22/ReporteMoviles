@@ -24,11 +24,11 @@ import de.cisha.android.board.playzone.engine.view.EngineOnlineOpponentChooserVi
 import de.cisha.android.board.playzone.engine.model.EngineOpponentChooserListener;
 import de.cisha.android.board.BaseFragment;
 
-public class PlayzoneOpponentChooserTabsFragment extends BaseFragment implements EngineOpponentChooserListener, OnlineEngineChooserListener
+public class PlayzoneOpponentChooserTabsFragment extends BaseFragment implements EngineOpponentChooserListener, EngineOnlineOpponentChooserView.OnlineEngineChooserListener
 {
     private IContentPresenter _contentPresenter;
     private EngineOpponentChooserListener _engineOpponentChooserListener;
-    private OnlineEngineChooserListener _onlineEngineChooserListener;
+    private EngineOnlineOpponentChooserView.OnlineEngineChooserListener _onlineEngineChooserListener;
     
     @Override
     public void onChoosen(final TimeControl timeControl, final int n, final String s, final boolean b) {

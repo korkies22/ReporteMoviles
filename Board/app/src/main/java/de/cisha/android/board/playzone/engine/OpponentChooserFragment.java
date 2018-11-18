@@ -32,7 +32,7 @@ import de.cisha.android.board.playzone.engine.view.EngineOnlineOpponentChooserVi
 import de.cisha.android.board.playzone.engine.model.EngineOpponentChooserListener;
 import de.cisha.android.board.AbstractContentFragment;
 
-public class OpponentChooserFragment extends AbstractContentFragment implements EngineOpponentChooserListener, OnlineEngineChooserListener
+public class OpponentChooserFragment extends AbstractContentFragment implements EngineOpponentChooserListener, EngineOnlineOpponentChooserView.OnlineEngineChooserListener
 {
     private void resumeGame(final PlayzoneGameSessionInfo playzoneGameSessionInfo) {
         this.getContentPresenter().showFragment(PlayzoneRemoteFragment.createFragmentWithSessionToken(playzoneGameSessionInfo, true), false, true);

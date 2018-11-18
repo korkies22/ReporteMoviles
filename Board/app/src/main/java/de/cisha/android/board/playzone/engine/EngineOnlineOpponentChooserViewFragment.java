@@ -44,6 +44,7 @@ public class EngineOnlineOpponentChooserViewFragment extends BaseFragment implem
                 EngineOnlineOpponentChooserViewFragment.this.runOnUiThreadBetweenStartAndDestroy(new Runnable() {
                     @Override
                     public void run() {
+                        EngineOnlineOpponentChooserViewFragment.this._engineOnlineOpponentView.clearAnimation(); // IMPLEMENT THIS
                         EngineOnlineOpponentChooserViewFragment.this._refreshLayout.setRefreshing(false);
                     }
                 });

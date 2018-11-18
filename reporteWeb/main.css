@@ -50,7 +50,13 @@
 .image_chess--image {
   margin: 1rem 1rem;
   display: inline-block;
-  max-width: 45%;
+  max-width: 20%;
+}
+
+.image_chess--image1 {
+  margin: 1rem 1rem;
+  display: inline-block;
+  min-width: 45%;
 }
 
 .image_chess--description {

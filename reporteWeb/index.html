@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>uHost</title>
+    <title>Reporte</title>
     <link rel="shortcut icon" href="favicon.png">
     <link rel="stylesheet" href="shared.css">
     <link rel="stylesheet" href="main.css">
@@ -65,39 +65,33 @@
         <section id="plans">
             <h1 class="section-title">What is Chess 24?</h1>
             <div class="image_chess">
-                <img class="image_chess--image" src="images/teaser.jpg"/>
-                <p class="image_chess--description">Chess 24 is a mobile chess game</p>
+                <img class="image_chess--image1" src="images/teaser.jpg"/>
+                <ul class="image_chess--description">
+                    <li>Chess 24 is a mobile chess game. Players can play as guest of create an account to enjoy different types of chess games.</li>
+                    <li>Play with another human or vs a computer.</li>
+                    <li>Watch professional tournaments.</li>
+                    <li>Review and analyze plays and figure out the best choice to make.</li>
+                    <li>Watch free and paid videos on how to play.</li>
+                </ul>
             </div>
-            <!-- TODOS, DESCRIBA QUE ES EL JUEGO EN UN ESTILO PARECIDO -->
-            <div class="plan__list">
-                <article class="plan">
-                    <h1 class="plan__title">FREE</h1>
-                    <h2 class="plan__price">$0/month</h2>
-                    <h3>For hobby projects or small teams.</h3>
-                    <ul class="plan__features">
-                        <li class="plan__feature">1 Workspace</li>
-                        <li class="plan__feature">Unlimited Traffic</li>
-                        <li class="plan__feature">10GB Storage</li>
-                        <li class="plan__feature">Basic Support</li>
-                    </ul>
-                    <div>
-                        <button class="button">CHOOSE PLAN</button>
-                    </div>
-                </article>
-                <article class="plan">
-                    <h1 class="plan__title">PREMIUM</h1>
-                    <h2 class="plan__price">$99/month</h2>
-                    <h3>Your enterprise solution.</h3>
-                    <ul class="plan__features">
-                        <li class="plan__feature">10 Workspaces</li>
-                        <li class="plan__feature">Unlimited Traffic</li>
-                        <li class="plan__feature">Unlimited Storage</li>
-                        <li class="plan__feature">Priority Support</li>
-                    </ul>
-                    <div>
-                        <button class="button">CHOOSE PLAN</button>
-                    </div>
-                </article>
+            <h1 class="section-title">Google play information</h1>
+            <div class="image_chess">
+                <img class="image_chess--image" src="images/chess_google_play.png"/>
+                <ul class="image_chess--description">
+                    <li>It has over 100.000 downloads</li>
+                    <li>Average score is 4.2 with over 5.000 reviews</li>
+                    <li>Not open source.</li>
+                </ul>
+            </div>
+            <h1 class="section-title">Procedure applied</h1>
+            <div class="image_chess">
+                <img class="image_chess--image" src="images/lock.png"/>
+                <ul class="image_chess--description">
+                    <li>Due to the app not being open source, we decompiled the apk file so we could check the code</li>
+                    <li>We changed the manifest to the app was debuggable and we could measure performance with android profiler</li>
+                    <li>That way, we played around with the app. And for every interesting thing that we saw, we expected the code to explained it</li>
+                    <li>We also reviewed the code in order to understand the architecture and other design desitions made</li>
+                </ul>
             </div>
         </section>
         <section id="key-features">

@@ -12,7 +12,7 @@ import java.util.Timer;
 import java.util.List;
 import android.support.v4.app.Fragment;
 
-public class FragmentConnectionLifecycleManager extends Fragment implements ConnectionLifecycleManager, IConnectionListener
+public class FragmentConnectionLifecycleManager extends Fragment implements ConnectionLifecycleManager, IConnection.IConnectionListener
 {
     private List<IConnection> _connections;
     private ActivityLifecycle _lifecycle;
