@@ -38,7 +38,7 @@
                        <a href="../index.html">Description</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="index.html">Performance</a>
+                        <a href="../performance/index.html">Performance</a>
                     </li>
                     <li class="main-nav__item">
                         <a href="../connectivity/index.html">Eventual connectivity</a>
@@ -63,44 +63,25 @@
         </ul>
     </nav>
     <main>
-        <section class="package" id="plus">
-            <a href="#">
-                <h1 class="package__title">Our PLUS Plan</h1>
-                <h2 class="package__badge">RECOMMENDED</h2>
-                <h2 class="package__subtitle">The most popular choice of our customers.</h2>
-                <p class="package__info">Benefit from increased storage and faster support to ensure that your mission-critical data and applications
-                    are always available!</p>
-            </a>
-        </section>
-        <section class="package" id="free">
-            <a href="#">
-                <h1 class="package__title">Our FREE Plan</h1>
-                <h2 class="package__subtitle">An extremely solid start into our hosting world.</h2>
-                <p class="package__info">Get started immediately at zero cost!</p>
-            </a>
-        </section>
-        <div class="clearfix"></div>
-        <section class="package" id="premium">
-            <a href="#">
-                <h1 class="package__title">Our PREMIUM Plan</h1>
-                <h2 class="package__subtitle">All your enterprise needs. Instant support, guaranteed uptime. </h2>
-                <p class="package__info">The best solution for small to large enterprises. Because hosting shouldn't be in the way!</p>
-            </a>
+        <section id="plans">
+            <h1 class="section-title">Security bug found</h1>
+            <div class="plan__list">
+                <article class="plan">
+                    <h1 class="plan__title">When the user leaves a match, it is available for all users</h1>
+                    <img class="image_example" src="images/wrongsave.gif"/>
+                    <p class="plan__feature">If the user is playing a match, then leaves it, then logs out and finally log in as another user or as a guest; the previous match is available to the other accounts or even as guest.</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/game_save.png"/>     
+                    <img class="image_code" src="images/local_save.png"/>           
+                    <p class="plan__feature">When the app saves a game for later resume, it does not care about the user's account. Therefore, anyone who enters in the application can load the game</p>
+                    <h1 class="plan__title">What should they do?</h1>
+                    <img class="image_code" src="images/user_save.png"/>      
+                    <p class="plan__feature">The app should also store the user who had the match. And at the moment of loading the match, the app should verify if the current user is the same user as the one playing. This way, the app could have multiple plays for different users at the same time too.</p>
+                </article>
+            </div>
         </section>
     </main>
-    <footer class="main-footer">
-        <nav>
-            <ul class="main-footer__links">
-                <li class="main-footer__link">
-                    <a href="#">Support</a>
-                </li>
-                <li class="main-footer__link">
-                    <a href="#">Terms of Use</a>
-                </li>
-            </ul>
-        </nav>
-    </footer>
-    <script src="../shared.js"></script>
+    <script src="shared.js"></script>
 </body>
 
 </html>

@@ -30,7 +30,7 @@
                        <a href="../index.html">Description</a>
                     </li>
                     <li class="main-nav__item">
-                        <a href="index.html">Performance</a>
+                        <a href="../performance/index.html">Performance</a>
                     </li>
                     <li class="main-nav__item">
                         <a href="../connectivity/index.html">Eventual connectivity</a>
@@ -101,10 +101,10 @@
                     <img class="image_example" src="images/main_reload.png"/>
                     <p class="plan__feature">However, when there is no content or in the news section. When the user goes there without internet, only a white screen or a simple reload button appears. In the case of the news section, when there was content and the user reloads it without internet, the content goes away and a white screen appears.</p>
                     <h1 class="plan__title">Why is this happening?</h1>        
-                    <p class="plan__feature">Besides the methods previously shown. There is not a verification about wether there are any videos or not. So when there are no videos, nothing special is shown</p>
+                    <p class="plan__feature">Besides the methods previously shown. There is not a verification about whether there are any videos or not. So when there are no videos, nothing special is shown</p>
                     <h1 class="plan__title">What should they do?</h1>
-                    <img class="image_code" src="images/show_dialog_waiting_suggestion.png"/>      
-                    <p class="plan__feature">They have a method called hideDialogWaiting, which they execute when the onSuccess method is called. However, if the onFailed method is called, the hideDialogWaiting method is not called, and therefore the dialog is stuck there forever.</p>
+                    <img class="image_code" src="images/no_content_suggestion.png"/>      
+                    <p class="plan__feature">The app should show some kind of message saying that there is no content. It would be even better if the app also allowed the user to know that the lack of content is due to having no internet.</p>
                 </article>
                 <article class="plan">
                     <h1 class="plan__title">Bad eventual connectivity example</h1>
@@ -115,7 +115,41 @@
                     <p class="plan__feature">The app sets an spinner and then tries to load the oponents with an http call. However, if the request failed then the only action taken is to do not let the user try to refresh it</p>
                     <h1 class="plan__title">What should they do?</h1>
                     <img class="image_code" src="images/online_oponents_sugestion.png"/>      
-                    <p class="plan__feature">They have a method called hideDialogWaiting, which they execute when the onSuccess method is called. However, if the onFailed method is called, the hideDialogWaiting method is not called, and therefore the dialog is stuck there forever.</p>
+                    <p class="plan__feature">The app should dismiss the loading spinner. Also, it would be a good idea if a message appear telling the user that there is no internet or encouraging them to pass to the offline plays.</p>
+                </article>
+            </div>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Eventual connectivity at an online match</h1>
+            <div class="plan__list">
+                <article class="plan">
+                        <h1 class="plan__title">Good eventual connectivity example</h1>
+                        <img class="image_example" src="images/match_internet.png"/>  
+                        <p class="plan__feature">If the user tries to access an online match and there is no internet connection, a message will appear informing that to the user.</p>
+                        <h1 class="plan__title">Why is this happening?</h1>     
+                        <img class="image_code" src="images/game_start_failed.png"/>
+                        <img class="image_code" src="images/game_join_failed.png"/>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">Bad eventual connectivity example</h1>
+                    <img class="image_example" src="images/match_loading.png"/>
+                    <p class="plan__feature">While the user is waiting for the match, the annoying loading dialog will appear. Unfortunatelly, once the dialog appears; if the user loses internet conection, then the dialog will be there forever.</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/on_failed_empty.png"/> 
+                    <img class="image_code" src="images/show_dialog_waiting_2.png"/>               
+                    <p class="plan__feature">When a match is searched, the dialog is shown to the user. However, if there is an error here, the onFailed method is empty, and the user will be waiting forever for something that never happens</p>
+                    <h1 class="plan__title">What should they do?</h1>
+                    <img class="image_code" src="images/on_failed_empty_suggestion.png"/>      
+                    <p class="plan__feature">This Fragment in charge of the game searches should go back to the menu, it should also show some kind of message to the user to inform them that they does not have internet.</p>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">Good eventual connectivity example</h1>
+                    <img class="image_example" src="images/match_disconnected.png"/>
+                    <p class="plan__feature">If the user loses internet connection while in a match, then this message will appear. The user now knows about the situation and have 30 seconds to recover before being thrown and let the rival win.</p>
+                    <h1 class="plan__title">Why is this happening?</h1>   
+                    <img class="image_code" src="images/on_connection_state.png"/>
+                    <img class="image_code" src="images/socket_io.png"/>     
+                    <p class="plan__feature">The game handles a remote match with a socket_io. This way the app monitors the connection at all times, and when it detects that the user is disconnected, the app gives the user a chance to reconnect during 30 seconds</p>
                 </article>
             </div>
         </section>

@@ -155,7 +155,7 @@
 }
 
 .key-feature__image {
-  background: #ffcede;
+  background: white;
   width: 128px;
   height: 128px;
   border: 2px solid #424242;
@@ -169,6 +169,7 @@
   font-weight: bold;
   color: white;
   font-size: 1.2rem;
+  max-width: 99%;
 }
 
 @media (min-width: 40rem) {
@@ -186,6 +187,11 @@
 /* h1 {
     font-family: sans-serif;
 } */
+
+.image_feature--1{
+  width:71px;
+  height: 81px;
+}
 
 .modal {
   position: fixed;
