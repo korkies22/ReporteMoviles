@@ -64,12 +64,14 @@
     </nav>
     <main>
         <section id="plans">
-            <h1 class="section-title">Performance bug found at game</h1>
+            <h1 class="section-title">GPU Usage</h1>
             <div class="plan__list">
                 <article class="plan">
-                    <h1 class="plan__title">If the user rotates screen while at game.../h1>
-                    <img class="image_example" src="images/error-onSave.gif"/>
-                    <p class="plan__feature">When the user rotates</p>
+                    <h1 class="plan__title">GIF recording GPU usage</h1>
+                    <img class="image_example" src="images/gpu_test.gif"/>
+                    <p class="plan__feature">The gif show the GPU usage while navigating through the app. When the bars go above the green line, it means that the processing time took more than 16ms and then the screen couldn't render at the speed of time needed in order to avoid lagging. However, even if some bars over the green line appeared while using the application, they didn't last long. Also, this also happens at the beginning of the screen transition and for a very short time. This means that there is not a considerable problem</p>
+<p class="plan__feature">Another thing to notice, is that even during a game, when there is need to render the table and the moves, there is not GUI lagging and the app runs very smooth</p>
+
                     <h1 class="plan__title">Why is this happening?</h1>
                     <img class="image_code" src="images/login_failed.png"/>           
                     <p class="plan__feature">For login and create account options, the onFailed method of the request is overridden, there they display the error dialog seen in the image</p>
@@ -77,77 +79,7 @@
             </div>
         </section>
 
-        <section id="plans">
-            <h1 class="section-title">Eventual connectivity at main activity</h1>
-            <div class="plan__list">
-                <article class="plan">
-                        <h1 class="plan__title">Good eventual connectivity example</h1>
-                        <img class="image_example" src="images/video_cached.png"/>  
-                        <p class="plan__feature">When there is a video already downloaded (marked with a "available without connection"), the user can access it when there is no internet without problems. Therefore, the application offers some sort of workaround.</p>
-                        <h1 class="plan__title">Why is this happening?</h1>     
-                        <img class="image_code" src="images/network_check.png"/>
-                        <img class="image_code" src="images/network_check2.png"/>    
-                        <p class="plan__feature">The video Fragment checks if there is internet connection and loads the videos. However, in any case it tries to load the videos on cache with the loadOfflineSeries method</p>
-                </article>
-                <article class="plan">
-                    <h1 class="plan__title">Bad eventual connectivity example</h1>
-                    <img class="image_example" src="images/main_news.png"/>
-                    <img class="image_example" src="images/main_reload.png"/>
-                    <p class="plan__feature">However, when there is no content or in the news section. When the user goes there without internet, only a white screen or a simple reload button appears. In the case of the news section, when there was content and the user reloads it without internet, the content goes away and a white screen appears.</p>
-                    <h1 class="plan__title">Why is this happening?</h1>        
-                    <p class="plan__feature">Besides the methods previously shown. There is not a verification about whether there are any videos or not. So when there are no videos, nothing special is shown</p>
-                    <h1 class="plan__title">What should they do?</h1>
-                    <img class="image_code" src="images/no_content_suggestion.png"/>      
-                    <p class="plan__feature">The app should show some kind of message saying that there is no content. It would be even better if the app also allowed the user to know that the lack of content is due to having no internet.</p>
-                </article>
-                <article class="plan">
-                    <h1 class="plan__title">Bad eventual connectivity example</h1>
-                    <img class="image_example" src="images/main_play_spin.png"/>
-                    <p class="plan__feature">In the play now fragment, a loading spinner appears when there is no internet connection. This spinner is never removed nor another message appear. However, in the top bar if the user selects offline play, then the cpu available options appear.</p>
-                    <h1 class="plan__title">Why is this happening?</h1>
-                    <img class="image_code" src="images/online_oponents_loading.png"/>               
-                    <p class="plan__feature">The app sets an spinner and then tries to load the oponents with an http call. However, if the request failed then the only action taken is to do not let the user try to refresh it</p>
-                    <h1 class="plan__title">What should they do?</h1>
-                    <img class="image_code" src="images/online_oponents_sugestion.png"/>      
-                    <p class="plan__feature">The app should dismiss the loading spinner. Also, it would be a good idea if a message appear telling the user that there is no internet or encouraging them to pass to the offline plays.</p>
-                </article>
-            </div>
-        </section>
-        <section id="plans">
-            <h1 class="section-title">Eventual connectivity at an online match</h1>
-            <div class="plan__list">
-                <article class="plan">
-                        <h1 class="plan__title">Good eventual connectivity example</h1>
-                        <img class="image_example" src="images/match_internet.png"/>  
-                        <p class="plan__feature">If the user tries to access an online match and there is no internet connection, a message will appear informing that to the user.</p>
-                        <h1 class="plan__title">Why is this happening?</h1>     
-                        <img class="image_code" src="images/game_start_failed.png"/>
-                        <img class="image_code" src="images/game_join_failed.png"/>
-                </article>
-                <article class="plan">
-                    <h1 class="plan__title">Bad eventual connectivity example</h1>
-                    <img class="image_example" src="images/match_loading.png"/>
-                    <p class="plan__feature">While the user is waiting for the match, the annoying loading dialog will appear. Unfortunatelly, once the dialog appears; if the user loses internet conection, then the dialog will be there forever.</p>
-                    <h1 class="plan__title">Why is this happening?</h1>
-                    <img class="image_code" src="images/on_failed_empty.png"/> 
-                    <img class="image_code" src="images/show_dialog_waiting_2.png"/>               
-                    <p class="plan__feature">When a match is searched, the dialog is shown to the user. However, if there is an error here, the onFailed method is empty, and the user will be waiting forever for something that never happens</p>
-                    <h1 class="plan__title">What should they do?</h1>
-                    <img class="image_code" src="images/on_failed_empty_suggestion.png"/>      
-                    <p class="plan__feature">This Fragment in charge of the game searches should go back to the menu, it should also show some kind of message to the user to inform them that they does not have internet.</p>
-                </article>
-                <article class="plan">
-                    <h1 class="plan__title">Good eventual connectivity example</h1>
-                    <img class="image_example" src="images/match_disconnected.png"/>
-                    <p class="plan__feature">If the user loses internet connection while in a match, then this message will appear. The user now knows about the situation and have 30 seconds to recover before being thrown and let the rival win.</p>
-                    <h1 class="plan__title">Why is this happening?</h1>   
-                    <img class="image_code" src="images/on_connection_state.png"/>
-                    <img class="image_code" src="images/socket_io.png"/>     
-                    <p class="plan__feature">The game handles a remote match with a socket_io. This way the app monitors the connection at all times, and when it detects that the user is disconnected, the app gives the user a chance to reconnect during 30 seconds</p>
-                </article>
-            </div>
-        </section>
-    </main>
+            </main>
     <script src="shared.js"></script>
 </body>
 
