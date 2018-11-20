@@ -69,16 +69,51 @@
                 <article class="plan">
                     <h1 class="plan__title">When the user leaves a match, it is available for all users</h1>
                     <img class="image_example" src="images/wrongsave.gif"/>
-                    <p class="plan__feature">If the user is playing a match, then leaves it, then logs out and finally log in as another user or as a guest; the previous match is available to the other accounts or even as guest.</p>
+                    <p class="plan__feature">If the user is playing a match, then leaves it, then logs out and finally log in as another user or as a guest; 
+                        the previous match is available to the other accounts or even as guest.</p>
                     <h1 class="plan__title">Why is this happening?</h1>
                     <img class="image_code" src="images/game_save.png"/>     
                     <img class="image_code" src="images/local_save.png"/>           
-                    <p class="plan__feature">When the app saves a game for later resume, it does not care about the user's account. Therefore, anyone who enters in the application can load the game</p>
+                    <p class="plan__feature">When the app saves a game for later resume, it does not care about the user's account. 
+                        Therefore, anyone who enters in the application can load the game</p>
                     <h1 class="plan__title">What should they do?</h1>
                     <img class="image_code" src="images/user_save.png"/>      
-                    <p class="plan__feature">The app should also store the user who had the match. And at the moment of loading the match, the app should verify if the current user is the same user as the one playing. This way, the app could have multiple plays for different users at the same time too.</p>
+                    <p class="plan__feature">The app should also store the user who had the match. And at the moment of loading the match, 
+                        the app should verify if the current user is the same user as the one playing. This way, the app could have multiple plays for different users at the same time too.</p>
                 </article>
             </div>
+        </section>
+        <section id="plans">
+                <h1 class="section-title">Security third party measurements</h1>
+                <div class="plan__list">
+                    <article class="plan">
+                        <h1 class="plan__title">Security on google play services</h1>
+                        <img class="image_example" src="images/security_google_play.jfif"/>
+                        <p class="plan__feature">As we were using an unsinged APK in order to make it debuggable, we could check some security measurements while using this kind of app</p>
+                        <p class="plan__feature">For example, all of the paying for the premium suscription is handled by Google play services. 
+                            This prevents us from messing with the payment system of the premium feature and therefore this feature is considered very secure</p>    
+                    </article>
+                    <article class="plan">
+                            <h1 class="plan__title">Security on Facebook login</h1>
+                            <img class="image_example" src="images/security_facebook_login.jfif"/>    
+                            <p class="plan__feature">Something unexpected, was that when we tried to login with Facebook on the unsinged apk, the above error appeared.
+                                It looks like the login with Facebook feature is also protected with some kind of hash key which refers to something not available in the decompiled application.
+                                This adds another layer of security to the app as it is not possible to fake the app and stole the user data without them noticing it.
+                            </p> 
+                        </article>
+                </div>
+        </section>
+        <section id="plans">
+                <h1 class="section-title">Security on custom login</h1>
+                <div class="plan__list">
+                    <article class="plan">
+                        <p class="plan__feature">However, when trying to log in with the custom application made login screen, the app let us do it. 
+                            This may represent a security risk due to another app or service stealing the data of an user making it login with the chess24 app without being allowed to do it</p>
+                        <h1 class="plan__title">What should they do?</h1> 
+                        <p class="plan__feature">The app should do the same as Facebook and Google play are doing. 
+                            This is, to verify that the place from the request origin has a Hash or some sort of key which certifies that the origin of the application is only the apps developed by the team.</p>
+                    </article>
+                </div>
         </section>
     </main>
     <script src="shared.js"></script>
