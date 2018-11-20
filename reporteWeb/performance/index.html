@@ -221,11 +221,26 @@
                         <article class="plan">
                             <h1 class="plan__title">Caching videos</h1>
                             <img class="image_code" src="images/SQL.png"/>
-                            <p class="plan__feature">For general http requests, the app uses a created class called HTTPAsyn, this class is in charge of handling asynchronous http requests.</p>
-                            <p class="plan__feature">The way it does it is by using an Executor with the execute method and a Handler with the post method. This delegates the call to another thread and thus the main Thread is not blocked</p>
-                            <p class="plan__feature">However, we think that even if this is a good strategy for HTTP calls, there is no need to reinvent the wheel. For example the volley library is also a good strategy for managing asynchronous http calls, and avoid the work of mantaining the library in the future</p>
-                            <p class="plan__feature">Another performance tactic used in this custom class, is that instead of doing String concatenation with classic Strings, they use String builders. This is a little Microoptimization (taking into account the length of the Strings) but still it is a practice worth of doing</p>
+                            <p class="plan__feature">The app handles an SQL database to cache the downloaded videos.</p>
+                            <p class="plan__feature">When a user chooses to save a video for offline view of it, the app stores the video using this class</p>
+                            <p class="plan__feature">This is made by the usage of 2 classes and 2 triggers. 
+                                One table stores a the metadata for the video in order to display the list of available videos.</p>
+                            <p class="plan__feature">The other table handles the info of the video itself with the video encoded as TEXT 
+                                as well as other data such as created_date, file_size, etc.</p>    
+                            <p class="plan__feature">The triggers are created so that when one table is updated, the other one is updated as well (Mainly for timestamp purposes).</p>                                             
                         </article>
+                        <article class="plan">
+                                <h1 class="plan__title">Usage of Shared Preferences</h1>
+                                <img class="image_code" src="images/sp_settings.png"/>
+                                <img class="image_code" src="images/sp_game.png"/>	
+                                <p class="plan__feature">SharePreferences was used for 2 purposes in the app: To store settings values and to store entire games (so they can be resumed later)</p>
+                                <p class="plan__feature">For settings: The app stores the default settings as well as the current ones selected by the user as Strings.
+                                    This is made so that the settings are saved across app openings and the user can recover the default values</p>
+                                <p class="plan__feature">For the game: The app encodes the game as a String so that it can recover it later for resume game purposes if the user closes the app while in a game. 
+                                    We recommend changing the usage of SharePreferences for this and instead create another SQL Lite table. 
+                                    This way, the user can store multiple games, and even better, multiple users in the same cellphone can store their games without one player seeing another's one game.
+                                This may hold a security risk which is more discussed in the security tab</p>
+                         </article>
                     </div>
         </section>
     
