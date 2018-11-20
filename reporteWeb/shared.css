@@ -342,8 +342,8 @@ main {
   }
 
   .plan {
-    min-width: 20%;
-    max-width: 33%;
+    min-width: 33%;
+    max-width: 48%;
 
   }
 
@@ -366,5 +366,6 @@ main {
 
 .image_chess--textAdded{
   max-width: 50%;
+  margin: 0 auto;
   text-align:center;
 }

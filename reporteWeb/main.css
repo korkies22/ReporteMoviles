@@ -48,7 +48,7 @@
 }
 
 .image_chess--image {
-  margin: 1rem 1rem;
+  margin: 1rem auto;
   display: inline-block;
   max-width: 20%;
 }
@@ -60,7 +60,7 @@
 }
 
 .image_chess--description {
-  margin: 1rem 1rem;
+  margin: 1rem auto;
   display: inline-block;
   max-width: 45%;
 }
