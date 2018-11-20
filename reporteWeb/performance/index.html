@@ -187,6 +187,7 @@
                             <p class="plan__feature">For general http requests, the app uses a created class called HTTPAsyn, this class is in charge of handling asynchronous http requests.</p>
                             <p class="plan__feature">The way it does it is by using an Executor with the execute method and a Handler with the post method. This delegates the call to another thread and thus the main Thread is not blocked</p>
                             <p class="plan__feature">However, we think that even if this is a good strategy for HTTP calls, there is no need to reinvent the wheel. For example the volley library is also a good strategy for managing asynchronous http calls, and avoid the work of mantaining the library in the future</p>
+                            <p class="plan__feature">Another performance tactic used in this custom class, is that instead of doing String concatenation with classic Strings, they use String builders. This is a little Microoptimization (taking into account the length of the Strings) but still it is a practice worth of doing</p>
                         </article>
                     </div>
             </section>

@@ -107,6 +107,19 @@
                 <p class =  "image_chess--textAdded">Using sentiment analysis we .</p>            
              </div>
         </section>
+        <section id="plans">
+                <h1 class="section-title">General architecture</h1>
+                <div class="image_chess">
+                    <img class="image_chess--image1" src="images/architecture.png"/>
+                    <ul class="image_chess--description">
+                        <li>The overall app is composed of 4 Main packages, 2 custom and 2 derived from libraries.</li>
+                        <li>The first package is in charge of storing the Activities, Fragments, animations and the drawing of the board</li>
+                        <li>The second package is in charge of handling the login of a match and other util classes like an Asynchronous custom HTTP request class.</li>
+                        <li>The third package is a socketio library, in charge of handling the online matches and warn the user if it lost the connection during a match.</li>
+                        <li>Finally, the fourth package is in charge of handling a Service for the login behind the matches. That is, when the user choose to play a match, the app launches a Service to handle in background all heavy tasks, mainly related to the logic of the game. This library is based on a popular OS library and it is made in C++, therefore is beyond the reach of this report.</li>
+                    </ul>
+                </div>
+            </section>
         <section id="key-features">
             <h1 class="section-title">Most critical TO-DOs</h1>
             <ul class="key-feature__list">
