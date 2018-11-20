@@ -363,3 +363,7 @@ main {
   width:100%;
   margin: 1rem auto;
 }
+
+.image_chess--textAdded{
+  max-width: 50%;
+}
