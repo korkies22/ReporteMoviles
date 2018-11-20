@@ -195,7 +195,40 @@
                             <p class="plan__feature">Another performance tactic used in this custom class, is that instead of doing String concatenation with classic Strings, they use String builders. This is a little Microoptimization (taking into account the length of the Strings) but still it is a practice worth of doing</p>
                         </article>
                     </div>
-            </section>
+        </section>
+
+        <section id="plans">
+                <h1 class="section-title">Usage of caching</h1>
+                <div class="plan__list">
+                    <article class="plan">
+                        <h1 class="plan__title">Caching on images</h1>
+                        <img class="image_code" src="images/ChachedImagesAtCacheWebImages.png"/>	
+                        <p class="plan__feature">The CacheWebImageService class in the board/service package is in charge of storing images downloaded for the web so that the user does not need to load them again.</p>
+                        <p class="plan__feature">For this, the app uses a HashMap with key as the name of the image and value as the Bitmap of the image itself.</p>
+                        <p class="plan__feature">The usage of a HashMap is a good idea due to finding the saved items in almost O(1).</p>
+                     </article>
+                    <article class="plan">
+                            <h1 class="plan__title">Caching on the lines</h1>
+                            <img class="image_code" src="images/ChachingSparseArrayAtEngineController.png"/>	
+                            <p class="plan__feature">The EngineController class in the board/engine package stores the lines calculated in an SparseArray</p>
+                            <p class="plan__feature">The lines are the series of possible plays computed in the background service. 
+                                Therefore it is a good idea to save them so that this expensive calculation service does not need to run again</p>
+                            <p class="plan__feature">The SparseArray is a good choice of usage because the lines are identified by an int. 
+                                Therefore it is better to use it than for example a HashMap because SparseArray does a better management of int as keys</p>
+                     </article>
+                </div>
+                <div class="plan__list">
+                        <article class="plan">
+                            <h1 class="plan__title">Caching videos</h1>
+                            <img class="image_code" src="images/SQL.png"/>
+                            <p class="plan__feature">For general http requests, the app uses a created class called HTTPAsyn, this class is in charge of handling asynchronous http requests.</p>
+                            <p class="plan__feature">The way it does it is by using an Executor with the execute method and a Handler with the post method. This delegates the call to another thread and thus the main Thread is not blocked</p>
+                            <p class="plan__feature">However, we think that even if this is a good strategy for HTTP calls, there is no need to reinvent the wheel. For example the volley library is also a good strategy for managing asynchronous http calls, and avoid the work of mantaining the library in the future</p>
+                            <p class="plan__feature">Another performance tactic used in this custom class, is that instead of doing String concatenation with classic Strings, they use String builders. This is a little Microoptimization (taking into account the length of the Strings) but still it is a practice worth of doing</p>
+                        </article>
+                    </div>
+        </section>
+    
 
             </main>
     <script src="shared.js"></script>
