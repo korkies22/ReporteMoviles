@@ -56,7 +56,7 @@ main {
   position: fixed;
   top: 0;
   left: 0;
-  background: #2ddf5c;
+  background: rgb(20,195,250);
   padding: 0.5rem 1rem;
   z-index: 60;
   display: -webkit-box;
@@ -120,7 +120,7 @@ main {
 .main-nav__item a,
 .mobile-nav__item a {
   text-decoration: none;
-  color: var(--dark-green);
+  color: #444;
   font-weight: bold;
   padding: 0.2rem 0;
 }
@@ -283,12 +283,12 @@ main {
 }
 
 .section-title {
-  color: #2ddf5c;
+  color: rgb(20,105,180);
   text-align: center;
 }
 
 .plan {
-  background: #d5ffdc;
+  background: rgb(180,233,239);
   text-align: center;
   padding: 1rem;
   margin: 0.5rem 0.5rem;
@@ -308,7 +308,7 @@ main {
 }
 
 .plan__title {
-  color: #0e4f1f;
+  color: rgb(20,105,180);
 }
 
 .plan__price {

@@ -131,7 +131,14 @@
                     <p class="plan__feature">In the AbstractPlayzoneFragment class, every time a move is made, the entire UI is set to repaint with a very complicated method. This is obviously a very expensive operation which may cause lagging. And taking into account that this happens for every move, it is prone to bad user experience and even ANR errors.</p>
 					<h1 class="plan__title">What should they do?</h1>
 					<img class="image_code" src="images/onMove_recommend.png"/>  
-					<p class="plan__feature">Instead of repainting the entire UI for every move, only the previous position should change (to show a blank cell) and the new position (to show the moved piece there). This makes that a expensive operation made for the 64 cells of the chess game is now applied to only 2 of the cells at every time.</p>
+                    <p class="plan__feature">Instead of repainting the entire UI for every move, only the previous position should change (to show a blank cell) and the new position (to show the moved piece there). This makes that a expensive operation made for the 64 cells of the chess game is now applied to only 2 of the cells at every time.</p>
+                    <img src="images/menu_slider.png"/>
+                    <img src="images/add_menu_item.png"/>
+                    <p class="plan__feature">Also, it is worth noticing that every time the main activity is created (for example every time the user returns from a Match, returns from a Video or logins);
+                         the side menu is re-created (As shown in the first image on the onCreate method of the Main Activity in the board package). 
+                         When that happens, for every menu item added in the side menu (except for the current one selected), the app sets a background to it (as shown in the addMenuItem in the SlideMenuInflater class in the board/mainmenu/view package)
+                    </p>
+                    <p class="plan__feature">Therefore, we recommend that this background is set in the layout files, so that the app does not need to repaint everytime for every menuItem added.</p>
                 </article>
 			</div>
         </section>
@@ -175,8 +182,8 @@
                         <img class="image_code" src="images/AsyncTask_doMove.png"/>				
                         <img class="image_code" src="images/post_execute.png"/>	
                         <p class="plan__feature">In the doMove method in the EngineConnection class found in the playzone/engine/model package, the app receives a move from the user and then selects the move to make. This involves complex algorithms and therefore it is a good idea to use a thread in the case.</p>
-                        <p class="plan__feature">The lintern here shows a message informing of a potential leak, due to being an internal class of the EngineConnection class. However, the engine connection class itself does not have a reference to the activity nor to any other fragment (and the class has not a lifecycle), so having a thread that runs in the background creates no leaks.</p>
-                        <p class="plan__feature">Finally, in the post execute they call a method of the class they're in, which later uses an Interface to send the reponse back. So again, no leak present</p>
+                        <p class="plan__feature">The lintern here shows a message informing of a potential leak, due to being an internal class of the EngineConnection class. And even if this Class is neither an Activity nor a Fragment, it still communicates with one using a chain of interfaces.</p>
+                        <p class="plan__feature">Therefore, even if it seems that the AbstractPlayzoneFragment (which is the Fragment who receives the callback at the end) has no Strong references to it, at the end the thread has an implicit reference to it and thus this represent a potential memory leak.</p>
                     </article>
                     <article class="plan">
                         <h1 class="plan__title">Threading on resource loading</h1>
@@ -193,6 +200,16 @@
                             <p class="plan__feature">The way it does it is by using an Executor with the execute method and a Handler with the post method. This delegates the call to another thread and thus the main Thread is not blocked</p>
                             <p class="plan__feature">However, we think that even if this is a good strategy for HTTP calls, there is no need to reinvent the wheel. For example the volley library is also a good strategy for managing asynchronous http calls, and avoid the work of mantaining the library in the future</p>
                             <p class="plan__feature">Another performance tactic used in this custom class, is that instead of doing String concatenation with classic Strings, they use String builders. This is a little Microoptimization (taking into account the length of the Strings) but still it is a practice worth of doing</p>
+                        </article>
+                        <article class="plan">
+                            <h1 class="plan__title">Bad usage of Asynctask</h1>
+                            <img class="image_example" src="images/dialog_bad.gif"/>
+                            <img class="image_code" src="images/dummy_exercise.png"/>
+                            <p class="plan__feature">In order to show the dialog seen in the previous gif and leave it there for about 3 seconds, 
+                                the method getNextExercise in the DummyTacticsExerciseService class in the board/tactics package uses an asynctas with a Thread sleep and then continues to the next exercise.
+                                This is a wrong usage of an Asynctask, and instead the app could have used just a simple thread and then call the same method that the asynctask is calling in the onPostExecute.
+                                It is also worth noticing that this asynctask is inside of a class that with an Interface communicates with the Fragment in charge, so this represents a potential memory leak.
+                            </p>
                         </article>
                     </div>
         </section>
