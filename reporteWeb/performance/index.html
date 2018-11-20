@@ -184,9 +184,9 @@
                         <article class="plan">
                             <h1 class="plan__title">Threading on general HTTP requests</h1>
                             <img class="image_code" src="images/http_async.png"/>
-                            <p class="plan__feature">For general http requests, the app uses a created class called HTTPAsync, this class is in charge of handling asynchronous http requests.</p>
-                            <p class="plan__feature">The way it does it is by using an Executor with the execute method. This delegates the call to another thread and thus the main Thread is not blocked</p>
-                            <p class="plan__feature">Finally, in the post execute they call a method of the class they're in, which later uses an Interface to send the reponse back. So again, no leak present</p>
+                            <p class="plan__feature">For general http requests, the app uses a created class called HTTPAsyn, this class is in charge of handling asynchronous http requests.</p>
+                            <p class="plan__feature">The way it does it is by using an Executor with the execute method and a Handler with the post method. This delegates the call to another thread and thus the main Thread is not blocked</p>
+                            <p class="plan__feature">However, we think that even if this is a good strategy for HTTP calls, there is no need to reinvent the wheel. For example the volley library is also a good strategy for managing asynchronous http calls, and avoid the work of mantaining the library in the future</p>
                         </article>
                     </div>
             </section>
