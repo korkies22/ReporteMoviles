@@ -13,14 +13,6 @@
 
 
 <body>
-        <div class="backdrop"></div>
-        <div class="modal">
-            <h1 class="modal__title">Do you want to continue?</h1>
-            <div class="modal__actions">
-                <a href="start-hosting/index.html" class="modal__action">Yes!</a>
-                <button class="modal__action modal__action--negative" type="button">No!</button>
-            </div>
-        </div>
         <header class="main-header">
             <div>
                 <button class="toggle-button">
@@ -63,6 +55,10 @@
         </ul>
     </nav>
     <main>
+		<div>
+			 <h1 class="section-title">Methodology used</h1>
+			 <p class="image_chess--textAdded">Three methods were applied to measure performance in the application. First the GPU usage in the Android developer options was used. The entire app was navigated with special attention in the spikes present</p>
+		</div>
         <section id="plans">
             <h1 class="section-title">GPU Usage</h1>
             <div class="plan__list">
@@ -73,10 +69,92 @@
 <p class="plan__feature">Another thing to notice, is that even during a game, when there is need to render the table and the moves, there is not GUI lagging and the app runs very smooth</p>
 
                     <h1 class="plan__title">Why is this happening?</h1>
-                    <img class="image_code" src="images/login_failed.png"/>           
-                    <p class="plan__feature">For login and create account options, the onFailed method of the request is overridden, there they display the error dialog seen in the image</p>
+                    <p class="plan__feature">In general, the application makes a good usage of threads. For every possible expensive piece of code that the app has to run, a thread is used to the application is very smooth</p>
+
                 </article>
             </div>
+        </section>
+		<section id="plans">
+            <h1 class="section-title">Overdraw revision</h1>
+            <div class="plan__list">
+                <article class="plan">
+                    <h1 class="plan__title">Overdraw recorded with developer options in Main activity</h1>
+                    <img class="image_example" src="images/overdraw_profile.png"/>
+					<img class="image_example" src="images/overdraw_videos.png"/>
+                    <p class="plan__feature">For most parts of the application, there is no considerable overdraw. As mentioned previously, the app runs very smooth. Only the titles show a bit of overdraw but this is due to the title being changed every time the user changes a tab</p>
+                    <h1 class="plan__title">Why is this happening?</h1>         
+                    <p class="plan__feature">There is not a single Class which overrides onDraw. Therefore this method is only used to paint the native components as it should be. Some layouts have a background though. But this are only for style purposes and the background are simple colors or simple gradients</p>
+                </article>
+				 <article class="plan">
+                    <h1 class="plan__title">Overdraw recorded with developer options in left Drawer</h1>
+                    <img class="image_example" src="images/overdraw_drawable.png"/>
+                    <p class="plan__feature">However, the overdraw recorder show that this is a section with a high overdraw. There is normally some overdraw in navigation drawers, but not at this level.</p>
+
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/highlight_init.png"/>           
+					<img class="image_code" src="images/highlight_method.png"/>       
+					<img class="image_code" src="images/highlight_methods.png"/>       
+                    <p class="plan__feature">In the MenuItem class found in the View Package, the drawer is defined. Here every time a Fragment is changed (the user clicks on something on the tab) the drawer is set to Highlight and the to remove Highlight. This makes some weird loops around the options available in the drawer which accounts for a lot of overdraw</p>
+					<h1 class="plan__title">What should they do?</h1>
+					<img class="image_code" src="images/highlight_changes.png"/>  
+					<p class="plan__feature">In the same method they should include one attribute and change the highlight methods. This way of highlighting and then remove the highlight from every MenuItem makes a little style change, but also may have a big impact on performance. If a cellphone is not very powerful, then the opening and closing of the drawer creates some uncomfortable lagging</p>
+					<p class="plan__feature">The proposed change is therefore to highlight only one MenuItem at a time, this will create only overdraw in one item which is something manageable in general</p>
+				</article>
+            </div>
+        </section>
+		
+		<section id="plans">
+            <h1 class="section-title">Overdraw revision</h1>
+            <div class="plan__list">
+				<article class="plan">
+                    <h1 class="plan__title">Overdraw recorded with developer options in tournament tab</h1>
+					<img class="image_example" src="images/overdraw_tournament.png"/>
+                    <p class="plan__feature">However, in the tournament tab, the list of tournaments is shown with a high overdraw. If the list is very big this may show some performance issues specially with old devices</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/tournament_holder.png"/>           
+                    <p class="plan__feature">In the TournamentHolder class, the app extends a typical ViewHolder of a recycleView and overrides all of its methods. One method overwritten is the notifyObserversGameChanged. This method sets all tournaments in the list to redraw when only one tournament change</p>
+                    <h1 class="plan__title">What should they do?</h1>
+					<img class="image_code" src="images/tournament_holder_change.png"/>  
+					<p class="plan__feature">It is proposed that a variable is added to this class. It contains the current tournament change which is passed as parameter. Therefore, it is only necessary to notify the recycle view when one tournament change, and the other tournaments are not repainted</p>
+				</article>
+				<article class="plan">
+                    <h1 class="plan__title">Overdraw recorded with developer options in a Match</h1>
+                    <img class="image_example" src="images/overdraw_play.png"/>
+                    <p class="plan__feature">While in a match, there is a considerable overdraw in the cells with pieces in it. This represents a problem because it means that the cells are redrawn from scratch in every move, which may represent some annoying lagging in old cellphones. This is truly a problem if the lag is very remarkable in every move!</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/onMove.png"/>           
+                    <p class="plan__feature">In the AbstractPlayzoneFragment class, every time a move is made, the entire UI is set to repaint with a very complicated method. This is obviously a very expensive operation which may cause lagging. And taking into account that this happens for every move, it is prone to bad user experience and even ANR errors.</p>
+					<h1 class="plan__title">What should they do?</h1>
+					<img class="image_code" src="images/onMove_recommend.png"/>  
+					<p class="plan__feature">Instead of repainting the entire UI for every move, only the previous position should change (to show a blank cell) and the new position (to show the moved piece there). This makes that a expensive operation made for the 64 cells of the chess game is now applied to only 2 of the cells at every time.</p>
+                </article>
+			</div>
+        </section>
+		
+		<section id="plans">
+            <h1 class="section-title">Profiling revision</h1>
+            <div class="plan__list">
+				<article class="plan">
+                    <h1 class="plan__title">Profiling on Main Activity</h1>
+					<img class="image_code" src="images/profiler_rotate_main.png"/>
+					<img class="image_code" src="images/profiler_video.png"/>					
+                    <p class="plan__feature">The profiler in Android Studio showed that in general the app is making a good usage of memory in the Main Activity and no leaks are present. By rotating the screen and switching from multiple tabs many time. The garbage collector was always able to leave the memory at the same level</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <img class="image_code" src="images/tournament_holder.png"/>           
+                    <p class="plan__feature">The tasks performed in the background have no strong references to the Main Activity. The app makes a good usage of threads and so no leaks are present in the app</p>
+				</article>
+				<article class="plan">
+                    <h1 class="plan__title">Profiling on offline Game</h1>
+                    <img class="image_code" src="images/bug_profile.jpg"/>
+                    <p class="plan__feature">However, during an offline game, when the user rotates the screen and the game is reloaded again, there is a huge increase in memory. When there is a garbage collector event, this piece of memory is not collected back and keeps stacking. All this memory makes the app slower and will lead to an OutOfMemory error in the future</p>
+                    <h1 class="plan__title">Why is this happening?</h1>
+                    <!-- TODO PONER IMAGEN DE POR QUÉ PASA EL BUG RARO, TAMBIÉN EXPLIQUE POR QUÉ Y PROPONGA UNA SOLUCIÓN, VEA OTROS EJEMPLOS-->           
+                    <p class="plan__feature">In the AbstractPlayzoneFragment class, every time a move is made, the entire UI is set to repaint with a very complicated method. This is obviously a very expensive operation which may cause lagging. And taking into account that this happens for every move, it is prone to bad user experience and even ANR errors.</p>
+					<h1 class="plan__title">What should they do?</h1>
+					<img class="image_code" src="images/onMove_recommend.png"/>  
+					<p class="plan__feature">Instead of repainting the entire UI for every move, only the previous position should change (to show a blank cell) and the new position (to show the moved piece there). This makes that a expensive operation made for the 64 cells of the chess game is now applied to only 2 of the cells at every time.</p>
+                </article>
+			</div>
         </section>
 
             </main>
