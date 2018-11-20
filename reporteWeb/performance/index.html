@@ -153,8 +153,13 @@
                     <img class="image_code" src="images/bug_profile.jpg"/>
                     <p class="plan__feature">However, during an offline game, when the user rotates the screen and the game is reloaded again, there is a huge increase in memory. When there is a garbage collector event, this piece of memory is not collected back and keeps stacking. All this memory makes the app slower and will lead to an OutOfMemory error in the future</p>
                     <h1 class="plan__title">Why is this happening?</h1>
-                    <!-- TODO PONER IMAGEN DE POR QUÉ PASA EL BUG RARO, TAMBIÉN EXPLIQUE POR QUÉ Y PROPONGA UNA SOLUCIÓN, VEA OTROS EJEMPLOS-->           
-                    <p class="plan__feature">In the AbstractPlayzoneFragment class, every time a move is made, the entire UI is set to repaint with a very complicated method. This is obviously a very expensive operation which may cause lagging. And taking into account that this happens for every move, it is prone to bad user experience and even ANR errors.</p>
+                    <img class="image_code" src="images/OnPauseGame.png"/>
+
+                    <p class="plan__feature">In the PlayzoneEngineFragment class, every 
+                        time we reload a game the aplication generate a new dialog in order to resume
+                        the game, but in the same class every time we pause the game it does not verfy that the game 
+                        has resumed this causes that every time we rotate the phone the application save the state of the game with all
+                        the Dialogs.</p>
 					<h1 class="plan__title">What should they do?</h1>
 					<img class="image_code" src="images/onMove_recommend.png"/>  
 					<p class="plan__feature">Instead of repainting the entire UI for every move, only the previous position should change (to show a blank cell) and the new position (to show the moved piece there). This makes that a expensive operation made for the 64 cells of the chess game is now applied to only 2 of the cells at every time.</p>
