@@ -59,7 +59,7 @@
                 <h1 class="section-title">Methodology</h1>
                 <p class="image_chess--textAdded">In order to analyze security we tested the way of storing offline games that the app does and explained the security risks that it has.
                     Then we analyzed all the login possibility methods in order to test if 
-                    we could login with an unsigned APK .
+                    we could login with an unsigned APK. Finally we reviewed the manifest to check permissions not related to the functioning of the app
                 </p>
             </div>
         <section id="plans">
@@ -113,6 +113,20 @@
                             This is, to verify that the place from the request origin has a Hash or some sort of key which certifies that the origin of the application is only the apps developed by the team.</p>
                     </article>
                 </div>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Permissions review</h1>
+            <div class="plan__list">
+                <article class="plan">
+                    <h1 class="plan__title">What should they do?</h1> 
+                    <img class="image_code" src="images/permissions.png"/>   
+                    <p class="plan__feature">The first 4 permissions in the image are typical to the functioning of the app</p>
+                    <p class="plan__feature">The app needs internet access to login and another online features, it is also convenient therefore to access the network state for eventual connectivity purposes</p>
+                    <p class="plan__feature">The app has its premium feature managed with google play services. Therefore the billing permission is also necessary to use google play billing</p>
+                    <p class="plan__feature">However, the Wakelock permission is something that is not coherent with the usage of the app. Even more, in the code we could not find any line which execute some kind of "acquire" on a Wakelock (besides from the Native Android components)</p>
+                    <p class="plan__feature">In conclussion, we think that this Wakelock permission is not necessary and should be removed. This also avoids the opportunity for someone to acquire a wakelock by mistake and not releasing it</p>
+                </article>
+            </div>
         </section>
     </main>
     <script src="shared.js"></script>
