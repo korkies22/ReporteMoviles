@@ -100,10 +100,18 @@
 					<img class="image_code" src="images/highlight_method.png"/>       
 					<img class="image_code" src="images/highlight_methods.png"/>       
                     <p class="plan__feature">In the MenuItem class found in the View Package, the drawer is defined. Here every time a Fragment is changed (the user clicks on something on the tab) the drawer is set to Highlight and the to remove Highlight. This makes some weird loops around the options available in the drawer which accounts for a lot of overdraw</p>
-					<h1 class="plan__title">What should they do?</h1>
+					<img class="image_code" src="images/backgrounds.png"/>       
+                    <p class="plan__feature">It is also worth to notice that the layout for a menu item (menu_item.xml) has backgrounds for some of its items. Which will increase the overdraw rate</p>
+                    <img class="image_code" src="images/menu_item_method.png"/>       
+                    <p class="plan__feature">Finally, in the addMenuItem method of the SlideMenuInflater class in the board/mainmenu/view package; the app sets another background for the items which doesn't have an action (are not clickable) which are around 5 in the final result.
+                        This increases even more the overdraw as the View System has to draw the entire drawer again.
+                    </p>
+                    <h1 class="plan__title">What should they do?</h1>
 					<img class="image_code" src="images/highlight_changes.png"/>  
 					<p class="plan__feature">In the same method they should include one attribute and change the highlight methods. This way of highlighting and then remove the highlight from every MenuItem makes a little style change, but also may have a big impact on performance. If a cellphone is not very powerful, then the opening and closing of the drawer creates some uncomfortable lagging</p>
-					<p class="plan__feature">The proposed change is therefore to highlight only one MenuItem at a time, this will create only overdraw in one item which is something manageable in general</p>
+                    <p class="plan__feature">The proposed change is therefore to highlight only one MenuItem at a time, this will create only overdraw in one item which is something manageable in general</p>
+                    <p class="plan__feature">It is proposed that the app has a different layout for the MenuItems without an action, so there is no need to change the background of the item after inflating it</p>
+                    <p class="plan__feature">Finally, we recommend that the app limitates the usage of backgrounds. This may make the app a little less stylish but the performance increase is a big difference specially to older cellphones</p>
 				</article>
             </div>
         </section>
@@ -132,13 +140,6 @@
 					<h1 class="plan__title">What should they do?</h1>
 					<img class="image_code" src="images/onMove_recommend.png"/>  
                     <p class="plan__feature">Instead of repainting the entire UI for every move, only the previous position should change (to show a blank cell) and the new position (to show the moved piece there). This makes that a expensive operation made for the 64 cells of the chess game is now applied to only 2 of the cells at every time.</p>
-                    <img src="images/menu_slider.png"/>
-                    <img src="images/add_menu_item.png"/>
-                    <p class="plan__feature">Also, it is worth noticing that every time the main activity is created (for example every time the user returns from a Match, returns from a Video or logins);
-                         the side menu is re-created (As shown in the first image on the onCreate method of the Main Activity in the board package). 
-                         When that happens, for every menu item added in the side menu (except for the current one selected), the app sets a background to it (as shown in the addMenuItem in the SlideMenuInflater class in the board/mainmenu/view package)
-                    </p>
-                    <p class="plan__feature">Therefore, we recommend that this background is set in the layout files, so that the app does not need to repaint everytime for every menuItem added.</p>
                 </article>
 			</div>
         </section>
